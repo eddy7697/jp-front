@@ -7,8 +7,9 @@
             <div class="form-group">
               <label for="language">{{langOb.LANGUAGE}}</label>
               <select @change="changeLan()" v-model="lang" class="form-control" id="language">
+                <option value="">select language</option>
                 <option value="ch-tw">中文</option>
-                <option value="jp">日本語</option>
+                <option value="JP">日本語</option>
               </select>
             </div>  
 
@@ -92,15 +93,18 @@ export default {
      adult: true,
      agree: true,
      lock: false,
-     lang: 'ch-tw',
+     lang: '',
      langOb: {}
    }
   },
   methods: { 
     changeLan() {
       if(this.lang == 'jp'){
-        localStorage.setItem('ULG_LANG', 'JP')
+        localStorage.setItem('ULG_LANG', this.lang)
+      } else {
+        localStorage.setItem('ULG_LANG', this.lang)
       }
+      location.reload()
     },
     freeToGo() {
       window.location = `${process.env.VUE_APP_DOMAIN_URL}${process.env.VUE_APP_FREE_TO_GO}`

@@ -1,3 +1,5 @@
+
+import { language } from '../../../assets/js/language'
 class slideToUnlock {
     constructor(el, options){
         this.$el = el;
@@ -27,13 +29,21 @@ class slideToUnlock {
 
             this.settings.status = this.$el.data("status");
         }
-
+        
         if(!("lockText" in this.settings)){
-            this.settings.lockText = "登入請往右滑驗證";
+            if(localStorage.getItem('ULG_LANG') == 'JP') {
+                this.settings.lockText = language['JP']['SWIPE_RIGHT'];
+            } else {
+                this.settings.lockText = language['TW']['SWIPE_RIGHT'];
+            }
         }
         
         if(!("unlockText" in this.settings)){
-            this.settings.unlockText = "驗證成功";            
+            if(localStorage.getItem('ULG_LANG') == 'JP') {
+                this.settings.unlockText = language['JP']['SWIPE_RIGHT'];
+            } else {
+                this.settings.unlockText = language['TW']['SWIPE_RIGHT'];
+            }         
         }
 
         this.init();
