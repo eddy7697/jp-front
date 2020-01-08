@@ -1,0 +1,962 @@
+/* input default text size for disabled iOS auto Zoom in */
+
+input,
+input[type="text"],
+input[type="password"],
+select:focus,
+select {
+    // font-size: 16px !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    // outline: none;
+}
+
+/* Disabled Select */
+
+.unselect{
+    // user-select: none;
+}
+
+/* font settings */
+
+$bebasNeue: "BebasNeue";
+
+@mixin fontStyle($fontFamily, $fontSize, $color) {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $color;
+}
+
+$fontSize_default: 1em;
+$fontSize_normal: 0.9em;
+$fontSize_small: 0.8em;
+$fontSize_mini: 0.65em;
+
+@mixin closeBtnFakeEl {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    background: #fff;
+}
+
+/* iPhone X Safe Area fixing */
+
+/* iOS 11 up */
+
+@mixin safeArea {
+    padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* iOS lower than 11 */
+
+@mixin safeAreaOld {
+    padding-top: constant(safe-area-inset-top);
+    padding-left: constant(safe-area-inset-left);
+    padding-right: constant(safe-area-inset-right);
+    padding-bottom: constant(safe-area-inset-bottom);
+}
+
+/* mixing obj */
+@mixin bgImage($bImageC) {
+    background-image: -moz-linear-gradient($bImageC);
+    background-image: -webkit-linear-gradient($bImageC);
+    background-image: -ms-linear-gradient($bImageC);
+    background-image: linear-gradient($bImageC);
+}
+
+@mixin fontSize($fontSize) {
+    font-size: $fontSize;
+}
+
+@mixin radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+}
+
+@mixin boxSizing {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+/* easing function */
+
+@mixin easeInOutExpo($time) {
+    transition: all $time cubic-bezier(1, 0, 0, 1);
+    -webkit-transition: all $time cubic-bezier(1, 0, 0, 1);
+    -moz-transition: all $time cubic-bezier(1, 0, 0, 1);
+    -o-transition: all $time cubic-bezier(1, 0, 0, 1);
+}
+
+@mixin easeInOutQuint($time) {
+    transition: all $time cubic-bezier(0.86, 0, 0.07, 1);
+    -webkit-transition: all $time cubic-bezier(0.86, 0, 0.07, 1);
+    -moz-transition: all $time cubic-bezier(0.86, 0, 0.07, 1);
+    -o-transition: all $time cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+@mixin easeInOutBack($time) {
+    transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Transform */
+
+@mixin transRotate($deg) {
+    transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+}
+
+/* filter */
+
+@mixin blur($blur) {
+    -webkit-filter: blur($blur);
+    -moz-filter: blur($blur);
+    -o-filter: blur($blur);
+    -ms-filter: blur($blur);
+    filter: blur($blur);
+}
+
+/* FlexBox */
+
+@for $i from 1 through 5 {
+    .flex#{$i} {
+        flex: $i;
+    }
+}
+
+@mixin flexBox($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin flexAlign($alignItems, $justifyContent) {
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+
+/* position offset */
+
+@mixin offSet($top, $right, $bottom, $left) {
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}
+
+/* grid system */
+
+@mixin grid_wrapper($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin grid($flex, $direction) {
+    flex: $flex;
+    flex-direction: $direction;
+}
+
+/* position center */
+
+@mixin alignCenter($position, $zIndex){
+    position: $position;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: $zIndex;
+}
+
+/* size */
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+/* media query */
+
+@mixin portrait {
+    @media all and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin landscape {
+    @media all and (orientation: landscape) {
+        @content;
+    }
+}
+
+/*
+xs: <= 575px
+sm: 576px ~ 767px
+md: >= 768px
+lg: >= 992px
+xl: >= 1200px
+*/
+
+$aspect43: "only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)";
+$aspect_iPad_10: "all and (min-device-width: 834px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)";
+$aspect_iPadPro: "all and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)";
+$aspect169: "all and (min-aspect-ratio: 16/9)";
+$aspect1610: "all and (min-aspect-ratio: 16/10)";
+
+@mixin aspect_43 {
+    @media #{$aspect43} {
+        @content;
+    }
+}
+
+@mixin aspect_iPadPro {
+    @media #{$aspect_iPadPro} {
+        @content;
+    }
+}
+
+@mixin aspect_169 {
+    @media #{$aspect169} {
+        @content;
+    }
+}
+
+@mixin aspect_1610 {
+    @media #{$aspect1610} {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media all and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media all and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media all and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media all and (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin customMax($width) {
+    @media all and (max-width: $width) {
+        @content;
+    }
+}
+@mixin customMin($width) {
+    @media all and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin iPhoneX {
+    @media all and (max-width: 812px) and (max-width: 375px) {
+        @content;
+    }
+}
+
+@mixin landScape_lg{
+    @media all and (min-height: 600px) and (orientation:landscape){
+        @content;
+    }
+}
+
+@mixin borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin customButton($width, $height){
+    border-radius: 15px;
+    background-image: linear-gradient(-180deg, #d62031 0%, #fe6b47 100%);
+    background-image: -moz-linear-gradient(-180deg, #d62031 0%, #fe6b47 100%);
+    background-image: -webkit-linear-gradient(-180deg, #d62031 0%, #fe6b47 100%);
+    background-image: -ms-linear-gradient(-180deg, #d62031 0%, #fe6b47 100%);
+    color: white;
+    width: $width;
+    height: $height;
+}
+
+%digitalFont {
+    font-family: fontNumber;
+}
+
+%hyperLink {
+    color: #191365;
+    font-weight: bold;
+    text-shadow: 0 0 0.1em #fff, 0 0 0.1em #fff, 0 0 0.1em #fff, 0 0 0.1em #fff, 0 0 0.1em #fff, 0 0 0.1em #fff, 0 0 0.1em #fff, 0 0 0.1em #fff, 0 0 0.1em #fff, 0 0 0.1em #fff, 0 0 0.1em #fff, 0 0 0.1em #fff, 0 0 0.1em #fff, 0 0 0.1em #fff, 0 0 0.1em #fff, 0 0 0.1em #fff, 0 0 0.1em #fff;
+}
+
+%customBkImage {
+    background-image: -moz-gradient( -180deg, rgb(255,108,71) 27%, rgb(255,103,78) 34%, rgb(255,98,84) 41%, rgb(232,69,65) 100%);
+    background-image: -ms-linear-gradient( -180deg, rgb(49, 16, 7) 27%, rgb(255,103,78) 34%, rgb(255,98,84) 41%, rgb(232,69,65) 100%);
+    background-image: -webkit-gradient( -180deg, rgb(255,108,71) 27%, rgb(255,103,78) 34%, rgb(255,98,84) 41%, rgb(232,69,65) 100%);
+    background-image: linear-gradient( -180deg, rgb(255,108,71) 27%, rgb(255,103,78) 34%, rgb(255,98,84) 41%, rgb(232,69,65) 100%);
+}
+
+%secondNavBg {
+    background-image: -moz-linear-gradient(-180deg, #fe6b47 0%, #ef1025 100%) !important;
+    background-image: -webkit-linear-gradient(-180deg, #fe6b47 0%, #ef1025 100%) !important;
+    background-image: -ms-linear-gradient(-180deg, #fe6b47 0%, #ef1025 100%) !important;
+    background-image: linear-gradient(-180deg, #fe6b47 0%, #ef1025 100%) !important;
+}
+
+%centerDiv {
+    display: inline;
+    margin: auto;
+}
+
+%secondNavScss {
+    vertical-align: baseline;
+    line-height: 35px;
+    width: 100%;
+    @extend %secondNavBg;
+    @include flexBox(row);
+    @include flexAlign(baseline, center);
+    // @include borderRadius(6px);
+    margin-top: 40px;
+    @include xl {
+        margin-top: 30px;
+    }
+    font-size: 16px;
+    @include xl {
+        font-size: 20px;
+    }
+    font-weight: bold;
+    color: white;
+    .active {
+        background: url('~@/assets/images/navibar/nav_round.png') center no-repeat;
+        background-size: 100%;
+    }
+    div {
+        width: 100px;
+        height: 47px;
+        text-align: center;
+        padding-top: 5px;
+        cursor: pointer;
+    }
+}
+
+%contractSecNavScss {
+    vertical-align: baseline;
+    line-height: 35px;
+    max-width: 1000px;
+    margin: auto;
+    width: 100%;
+    position: relative;
+    top: -62px;
+    @extend %secondNavBg;
+    @include flexBox(row);
+    @include flexAlign(baseline, center);
+    font-size: 16px;
+    @include xl {
+        font-size: 20px;
+    }
+    font-weight: bold;
+    color: white;
+    .active {
+        background: url('~@/assets/images/navibar/contractShop.png') center no-repeat;
+        background-size: 50%;
+        height: 50px;
+        width: 500px;
+    }
+    div {
+        width: 100px;
+        height: 47px;
+        text-align: center;
+        padding-top: 5px;
+        cursor: pointer;
+    }
+}
+
+%general-width {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+%contractShopBg {
+    background: white;
+}
+
+%contractShopSubNav {
+    background: linear-gradient(180deg, #ff6c47 27%, #ff674e 34%, #ff6254 41%, #e84541 100%);
+    background: -moz-linear-gradient(180deg, #FF6C47 12%, #E84541 67%);
+    background: -webkit-linear-gradient(180deg, #FF6C47 12%, #E84541 67%);
+    background: -o-linear-gradient(180deg, #FF6C47 12%, #E84541 67%);
+}
+
+%blue-link {
+    cursor: pointer;
+    text-align: center;
+    height: 30px;
+    width: 90px;
+    color: white;
+    text-shadow: 0 0 0.1em #dc3545;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#d62031), to(#fe6b47));
+    background-image: linear-gradient(-180deg, #d62031 0%, #fe6b47 100%);
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(83, 83, 83, 0.04), inset 0px 0px 5px 0px #ffc4c9;
+    box-shadow: 0px 0px 3px 0px #21252933, inset 0px 0px 5px 0px #ffc4c9;
+
+
+    box-shadow: 0px 0px 3px 0px rgba(83, 83, 83, 0.04), inset 0px 0px 5px 0px #ffc8cd;
+    background-color: transparent;
+    border: none;
+    margin:auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: block;
+    height: 30px;
+    line-height: 25px;
+    /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+    -webkit-border-radius: 8px; 
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 8px; 
+    /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+    border-radius: 8px;
+}
+
+%gray-link {
+        text-align: center;
+        height: 30px;
+        width: 90px;
+        color: white!important;
+        text-shadow: 0 0 0.1em #5a3f0b;
+        background-image: -moz-linear-gradient( -180deg, rgb(61,61,61) 0%, rgb(225,225,225) 100%);
+        background-image: -webkit-linear-gradient( -180deg, rgb(61,61,61) 0%, rgb(225,225,225) 100%);
+        background-image: -ms-linear-gradient( -180deg, rgb(61,61,61) 0%, rgb(225,225,225) 100%);
+        background-image: linear-gradient( -180deg, rgb(61,61,61) 0%, rgb(225,225,225) 100%);
+        box-shadow: 0px 0px 3px 0px rgba(83, 83, 83, 0.04),inset 0px 0px 5px 0px rgba(186, 186, 186, 1);
+        background-color: transparent;
+        border: none;
+        margin:auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        display: block;
+        height: 30px;
+        line-height: 25px;
+        /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+        -webkit-border-radius: 8px; 
+        /* Firefox 1-3.6 */
+        -moz-border-radius: 8px; 
+        /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+        border-radius: 8px;
+        padding-top: 5px;
+}
+
+%tool-cards {
+    #cardArea {
+        @include flexBox(row);
+        @include flexAlign(baseline, space-around);
+        flex-wrap: wrap;
+    }
+    .col-12 {
+        margin-top: 40px;
+        .card-item {
+            background: url('~@/assets/images/mall/card.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 200px;
+            width: 500px;
+            position: relative;
+            @include customMax(500px) {
+                height: 150px;
+                width: 375px;   
+            }
+            .card-name {
+                width: 8vw;
+                max-width: 100px;
+                display: block;
+                margin-left: 10px;
+                max-width: 65px;
+                color: rgb(255, 235, 184);
+                font-weight: bold;
+                @include customMax(750px) {
+                    width: 13vw;
+                    max-width: 45px;
+                }
+                position: relative;
+                top: 25px;
+                white-space:nowrap;
+            }
+            .tool-pic {
+                width: 25vw;
+                max-width: 100px;
+                display: block;
+                margin-left: 10px;
+                margin-top: 10px;
+                max-width: 105px;
+                cursor: pointer;
+                @include customMax(1000px) {
+                    width: 800px;
+                    max-width: 83px;
+                }
+                @include customMax(750px) {
+                    width: 24vw;
+                    max-width: 70px;
+                }
+            }
+            .stock {
+                width: 150px;
+                position: absolute;
+                top: 25px;
+                color: white;
+                font-weight: bold;
+                left: 90px;
+                @include customMax(500px) {
+                    left: 93px;
+                    top: 18px;
+                    text-align: left;
+                }
+            }
+            .desc {
+                position: absolute;
+                left: 145px;
+                top: 80px;   
+                max-width: 170px;
+                width: 170px;
+                white-space: nowrap; 
+                overflow: hidden;
+                text-overflow: ellipsis;
+                div {
+                    width: 130px;
+                    white-space: nowrap; 
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                @include customMax(500px) {
+                    left: 100px;
+                    top: 44px;
+                }         
+            }
+            .price {
+                color: rgb(255, 235, 184);
+                font-weight: bold;
+                position: absolute;
+                left: 220px;
+                bottom: 73px;
+                @include customMax(500px) {
+                    left: 160px;
+                    bottom: 95px;
+                    font-size: 16px;
+                    bottom: 60px;
+                }
+            }
+            button  {
+                border-radius: 12px;
+                background-image: -moz-linear-gradient(-180deg,
+                    rgb(104, 13, 13) 0%,
+                    rgb(241, 56, 42) 100%);
+                background-image: -webkit-linear-gradient(-180deg,
+                    rgb(104, 13, 13) 0%,
+                    rgb(241, 56, 42) 100%);
+                background-image: -ms-linear-gradient(-180deg,
+                    rgb(104, 13, 13) 0%,
+                    rgb(241, 56, 42) 100%);
+                background-image: linear-gradient(-180deg,
+                rgb(104, 13, 13) 0%,
+                rgb(241, 56, 42) 100%);
+                box-shadow: 0px 0px 3px 0px rgba(83, 83, 83, 0.004),
+                    inset 0px 0px 5px 0px rgba(253, 58, 58, 2);
+                background-color: transparent;
+                border: none;
+                text-align: center;
+                height: 40px;
+                width: 15%;
+                color: white;
+                position: relative;
+                right: -180px;
+                top: 5px;
+                @include customMax(500px){
+                    right: -123px;
+                    top: -8px;
+                    height: 30px;
+                    width: 80px;
+                }
+            }
+        }
+    }
+}
+
+
+@mixin scrollBar() {
+    ::-webkit-scrollbar-thumb { 
+        background-image: -moz-linear-gradient(90deg,
+        rgb(25, 19, 101) 0%,
+        rgb(30, 156, 171) 100%) !important;
+        background-image: -webkit-linear-gradient(90deg,
+            rgb(25, 19, 101) 0%,
+            rgb(30, 156, 171) 100%) !important;
+        background-image: -ms-linear-gradient(90deg,
+            rgb(25, 19, 101) 0%,
+            rgb(30, 156, 171) 100%) !important;
+        background-image: linear-gradient(90deg,
+        rgb(25, 19, 101) 0%,
+        rgb(30, 156, 171) 100%) !important;
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #b30000 !important;
+    }
+}
+
+input[type=checkbox]:checked:before  {
+    background: url('~@/assets/images/checkbox/check.png') no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 111%; 
+    height: 112%;
+    content:"";
+    position: relative; 
+    left: -1px;
+    top: -1px;
+}
+
+input[type=checkbox]:before  {
+    background: url('~@/assets/images/checkbox/uncheck.png') no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 111%; 
+    height: 112%;
+    content:"";
+    position: relative; 
+    left: -1px;
+    top: -1px;
+}
+
+%modalBackground {
+    width: 100%;
+    height: 150%;
+    background: #00000069;
+    position: absolute;
+    min-height: 1100px;
+    top: 0;
+    left: 0;
+    z-index: 99999999999999;
+    overflow: hidden;
+}
+
+%customModalScss {
+    @extend %modalBackground;
+    position:absolute;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    min-height: 1100px;
+    z-index: 99999999999999;
+    overflow: hidden;
+    .content {
+        overflow: hidden;    
+        max-width: 500px;
+        width: 80%;
+        // height: 500px;
+        background-color: white;
+        @include radius(12px);
+        margin: auto;
+        margin-top: 0px;
+        min-height: 500px;
+    }
+    .cancel {
+        width: 25px;
+        cursor: pointer;
+    }
+}
+
+%dark-head-table {
+    table {
+        background: white;
+        th {
+            background: black;
+            color: white;
+        }
+        td {
+            color: black;
+        }
+    }
+}
+
+.swal2-container.swal2-shown {
+    position: absolute;
+    z-index: 99999999999;
+}
+
+%contractFilterModal {
+    @extend %customModalScss;
+    .content{
+        overflow: scroll;    
+    }
+    
+}
+
+%contractShopModal {
+    @extend %customModalScss;
+    overflow: scroll;
+    .content {
+        overflow: scroll;
+        .del {
+            position: relative;
+            z-index: 2;
+        }
+        h4 {
+            background: green;
+            color: white;
+            text-align: center;
+            position: relative;
+            top: -28px;
+            z-index: 1;
+            border-top-right-radius: 12px;
+            border-top-left-radius: 12px;
+        }
+        background: #faffed;
+        .container {
+            margin-top: 30px;
+            padding-bottom: 40px;
+            min-height: 450px;
+        }
+        ul {
+            list-style-type: none;
+        }
+        .form-control:disabled, .form-control[readonly] {
+            background-color: #e9ecef;
+        }
+        .btn {
+            margin-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+%tradeModalCustom {
+    @extend %customModalScss;
+    .content {
+        max-width: 400px;
+        overflow: scroll;    
+
+        .col-6 {
+            @include customMax(380px) {
+                padding: 0px;
+            }
+        }
+        background: white;
+        .input-area {
+            color: gray;
+            padding: 5px 30px!important;
+
+            @include customMax(500px) {
+            }
+        }
+        h4 {
+            text-align: center;
+        }
+        .container {
+            margin-top: 30px;
+            padding: 0 30px;
+        }
+        #cardContentDesc {
+            display: block;
+            margin: auto;
+            height: 400px;   
+        }
+        #btnFooter {
+            margin: 15px 0px;
+            button {
+                margin-left: 15px;
+            }
+        }
+        .goldCoin {
+            height: 50px;
+            .number {
+                width: 140px;
+                background: url('~@/assets/images/modals/gold_coin.png') no-repeat;
+                background-size: cover;
+                height: 45px;
+                display: block;
+                margin: auto;
+                color: white;
+                padding: 15px;
+                padding-left: 40px;
+                font-size: 13px;
+            }
+        }
+        .uCoin {
+            height: 50px;
+            .number {
+                width: 140px;
+                background: url('~@/assets/images/modals/ucoin_coin.png') no-repeat;
+                background-size: cover;
+                height: 45px;
+                display: block;
+                margin: auto;
+                color: white;
+                padding: 15px;
+                padding-left: 40px;
+                font-size: 13px;
+            }
+        }
+        .input-area {
+            color: gray;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px;
+            input {
+                border: 1px solid black;
+                @include borderRadius(12px);
+            }
+            label {
+                margin-bottom: 0px;
+            }
+        }
+        .iconGold {
+            width: 55px;
+        }
+        .iconUcoin {
+            width: 55px;
+        }
+        .gold-balance {
+            display: block;
+            margin: auto;
+            height: 80px;
+            padding-top: 0px;
+            padding-left: 15px;
+            font-weight: bold;
+            font-size: 40px;
+            position: relative;
+            top: -5px;
+            color: #d5a538;
+            float: left;
+        }
+        .ucoin-balance {
+            display: block;
+            margin: auto;
+            height: 80px;
+            padding-top: 0px;
+            padding-left: 15px;
+            font-weight: bold;
+            font-size: 40px;
+            position: relative;
+            top: -5px;
+            color: #2073b9;
+            float: left;
+        }
+        .pro-balance {
+            display: block;
+            margin: auto;
+            height: 80px;
+            padding-top: 0px;
+            padding-left: 15px;
+            font-weight: bold;
+            font-size: 40px;
+            position: relative;
+            top: -5px;
+            color: #773f3f;
+            float: left;
+        }
+        .ucoin-balance-result {
+            display: block;
+            margin: auto;
+            height: 80px;
+            padding: 5px 0px 0px 15px;
+            font-weight: bold;
+            font-size: 20px;
+            position: relative;
+            top: 10px;
+            color: #2073b9;
+            float: left;
+            max-width: 160px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .gold-balance-result {
+            display: block;
+            margin: auto;
+            height: 80px;
+            padding: 5px 0px 0px 15px;
+            font-weight: bold;
+            font-size: 20px;
+            position: relative;
+            top: 10px;
+            color: #d5a538;
+            float: left;
+            max-width: 160px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .pro-balance-result {
+            display: block;
+            margin: auto;
+            height: 80px;
+            padding: 5px 0px 0px 15px;
+            font-weight: bold;
+            font-size: 20px;
+            position: relative;
+            top: 10px;
+            color: #773f3f;
+            float: left;
+            max-width: 160px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+}
+.btn-default {
+    background: gray!important;
+    color: white!important;
+}
+
+.hidden {
+    display: none!important;
+}
+
+.stars_icons {
+    width: 100px!important;
+}
+
+.qrCodeString {
+    word-break: break-all;
+}
+
+%everyPageBackground {
+    background: url('~@/assets/images/background/allbg.jpg');
+    background-size: 150px;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    width: 100%; 
+    height: 100%;
+}
+
+.arrowIcon {
+    position:relative;
+    top: -2px;
+}
+

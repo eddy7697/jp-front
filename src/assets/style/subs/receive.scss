@@ -1,0 +1,40 @@
+.receivePage {
+    @extend %everyPageBackground;
+    min-height: 1000px;
+    @include customMax(500px){
+        padding-bottom: 300px;
+    }
+    .receiveContent {
+        .card {  
+            margin-top: 20px; 
+            height: auto; 
+            @include flexBox(row);
+            @include flexAlign(baseline, center);
+            img {
+                width: 85px;
+                display: block;
+                margin: auto;
+            }
+            div:first-child {
+                flex: 1;
+            }
+            div:nth-child(2) {
+                flex: 4;
+            }
+            div:nth-child(3) {
+                flex: 1;
+            }
+            div {
+                width: 33.3%;
+                margin: auto;
+                p {
+                    margin-bottom: 0px;
+                }
+            }
+            button {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

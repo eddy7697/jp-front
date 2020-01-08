@@ -1,0 +1,72 @@
+.envelope {
+    @extend %modalBackground;
+    .content {
+        padding-top: 30vh;
+        width: 25%;
+        @include lg {
+            width: 80%;
+        }
+        margin: auto;
+        @include flexBox(row);
+        @include flexAlign(stretch, center);
+        flex-wrap: wrap;
+        div {
+            width: 50%;
+            height: 100px;
+            margin-top: 20px;
+            cursor: pointer;
+            img {
+                width: 100px;
+                display: block;
+                margin: auto;
+            }
+            .price {
+                text-align: center;
+                position: relative;
+                top: -50px;
+                z-index: 99999999;
+                margin: auto;
+                font-weight: bold;
+                color: red;
+            }
+        }
+    }
+    .congrat {
+        .congrat-Img {
+            width: 375px;
+            max-width: 500px;
+            display: block;
+            margin: auto;
+            margin-top: 120px;
+        }
+        .text-white {
+            position: relative;
+            display: block;
+            margin: auto;
+            width: 100%;
+            top: 410px;  
+            font-size: 27px;        
+        }
+        .price {
+            text-align: center;
+            position: relative;
+            top: -133px;
+            z-index: 99999999;
+            margin: auto;
+            font-weight: bold;
+            color: red;
+            font-size: 32px;
+        }
+        .btn-success {
+            position: relative;
+            top: -130px;
+        }
+        h6 {
+            height: 40px;
+            position: relative;
+            top: -124px;
+            color: white;
+            font-size: 22px;
+        }
+    }
+}

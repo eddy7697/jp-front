@@ -1,0 +1,32 @@
+.avatars {
+    @extend %modalBackground;
+    min-height: 1700px;
+    padding: 40px 0;
+    position: absolute;
+    z-index: 999999999999999;
+    .content {
+        padding-top: 20px;
+        background: white;
+        width: 80%;
+        margin: auto;
+        @include flexBox(row);
+        @include flexAlign(baseline, center);
+        flex-wrap: wrap;
+        @include customMax(500px) {
+            width: 100%;
+        }
+        @include radius(12px);
+        div {
+            width: 20%;
+            padding: 20px 0px;
+            img {
+                margin: auto;
+                display: block;
+                @include customMax(500px) {
+                    width: 45px;
+                }
+            }
+        }
+        overflow: scroll;
+    }
+}

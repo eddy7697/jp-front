@@ -1,0 +1,61 @@
+.waist {
+    .Game {
+        background: none;
+        padding-bottom: 20px;
+        @include customMax(500px) {
+            // min-height: 700px;
+        }
+        @include customMax(500px){
+            // padding-bottom: 300px;
+        }
+        .wrapper {
+            .row {
+                // min-width: 600px;
+                height: auto;
+                width: 600px;
+                display: block;
+                margin: auto;
+                // overflow: scroll;
+                @include customMax(500px) { 
+                    // height: 700px;
+                    width: auto;
+                }
+            }
+            .game-div {
+                width: 33.3%;
+                @include customMax(500px) {
+                    margin: auto;
+                    width: auto;
+                }
+                @include customMin(500px) {
+                    // width: 80px;
+                    width: 19%;
+                }
+                img {
+                    width: 120px;
+                    height: 120px;
+                    cursor: pointer;
+                    margin: auto;
+                    display: block;
+                }
+                .new {
+                    position: relative;
+                    .flag {
+                        position: absolute;
+                        left: 0px; 
+                        top: 0px;
+                        width: 60px;
+                        height: 40px;
+                    }
+                }
+                .blue-link {
+                   @extend %blue-link;
+                   width: 110px;
+                   display: block;
+                   margin: auto;
+                   margin-left: 6%;
+                }
+            }
+        }
+    }
+}

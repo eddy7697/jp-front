@@ -1,0 +1,91 @@
+.Game {
+    @extend %everyPageBackground;
+    padding-top: 0px;
+    margin: auto;
+    min-width: 350px;
+    min-height: 700px;
+    @include customMax(500px){
+        // padding-bottom: 300px;
+    }
+    .gameArea {
+        .molopoly-doc {
+            width: 100%;
+        }
+        width: 80%;
+        margin: auto;
+        margin-top: 0px;
+        // overflow-x: scroll;
+        position: relative;
+        @include scrollBar;
+        @include lg {
+            width: 100%;
+        }
+        @include customMax(500px){
+            // min-width: 600px;
+        }
+        
+        .wrapper {
+            width: 999px;
+            display: inline;
+            text-align: center;
+            .molopoly {
+                margin-top: 10px;
+                img {
+                    margin: auto;
+                    display: block;
+                    cursor: pointer;
+                    max-width: 550px;
+                    @include customMax(500px) {
+                        width: 100vw;
+                        padding: 0 10px;
+                    }
+                }
+                .fa-chevron-circle-up {
+                    color: white;
+                    font-size: 24vw;
+                }
+                h3 {
+                    color: white;
+                }
+            }
+            .row {
+                @include customMax(500px) {
+                    
+                }
+            }
+            @include xl {
+                min-height: 600px;
+            }
+            .game-div {
+                width: 150px;
+                height: 150px;
+                // margin: 15px;
+                // margin-left: 25px;
+                display: inline-block;
+                .new {
+                    position: relative;
+                    .flag {
+                        position: absolute;
+                        left: 0px; 
+                        top: 0px;
+                        width: 80px;
+                        height: 60px;
+                    }
+                }
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
+                .blue-link {
+                    @extend %blue-link;
+                }
+                .gray-link {
+                    margin-top: 0px!important;
+                    @extend %gray-link;
+                }
+            }
+            
+        }
+    }
+}
+

@@ -1,0 +1,153 @@
+@import './common/common.scss';
+@import './fonts/fonts.scss';
+@import './css/rotate.scss';
+@import './ui/game/gameSecNav.scss';
+@import './ui/system/tradePanel.scss';
+@import './ui/system/newest.scss';
+@import './ui/system/carousel.scss';
+@import './ui/trade/coinInfo.scss';
+@import './ui/trade/tradeSubNav.scss';
+@import './ui/mall/mallSec.scss';
+@import './ui/trade/tradeSec.scss';
+@import './ui/receive/receiveSec.scss';
+@import './ui/newsSec/newsSec.scss';
+@import './ui/deposit/deposit.scss';
+@import './ui/deposit/personalTable.scss';
+@import './ui/accountHistoryTable/accountHistoryTable.scss';
+@import './ui/accountInfoPanel/accountInfoPanel.scss';
+@import './ui/sideNav/sideNav.scss';
+@import './ui/registration/registrationSec.scss';
+@import './ui/registration/registration.scss';
+@import './ui/contractShop/contractShopSec.scss';
+@import './ui/contractShop/subMenu.scss';
+@import './ui/table/toolRecord.scss';
+@import './ui/table/newsTable.scss';
+@import './ui/table/tradeHistoryTable.scss';
+@import './ui/table/commissionTable.scss';
+@import './ui/game/gameHistory.scss';
+@import './modals/avatars.scss';
+@import './modals/envelope.scss';
+@import './modals/noEcPay.scss';
+@import './modals/payStyle.scss';
+@import './modals/newsContent.scss';
+@import './modals/busyLoading.scss';
+@import './modals/authSellModal.scss';
+@import './modals/authBuyModal.scss';
+@import './modals/beforeBuyCard.scss';
+@import './modals/adsModal.scss';
+@import './modals/confirmSureReceive.scss';
+@import './subs/mall.scss';
+@import './subs/login.scss';
+@import './subs/map.scss';
+@import './subs/newest.scss';
+@import './subs/navibar.scss';
+@import './subs/game.scss';
+@import './subs/system.scss';
+@import './subs/systemGame.scss';
+@import './subs/account.scss';
+@import './subs/group.scss';
+@import './subs/footer.scss';
+@import './subs/pcFooter.scss';
+@import './subs/giftPanel.scss';
+@import './subs/mall.scss';
+@import './subs/editUserForm.scss';
+@import './subs/deposit.scss';
+@import './subs/receive.scss';
+@import './subs/levelInfo.scss';
+@import './subs/contractShop.scss';
+@import './subs/mainPage.scss';
+@import './subs/registrationRules.scss';
+@import './contractShop/category/category.scss';
+@import './contractShop/filter/categoryFilter.scss';
+@import './contractShop/filter/filterModal.scss';
+@import './contractShop/qrCode/qrCode.scss';
+@import './contractShop/shops/shop.scss';
+@import './contractShop/qrCodeScan/qrCodeScan.scss';
+@import './contractShop/newsMarquee/newsMarquee.scss';
+@import './components/mall/mallCenter.scss';
+@import './components/mall/myTool.scss';
+@import './components/mall/toolRecord.scss';
+@import './components/group/chart.scss';
+@import './components/group/myGoodFd.scss';
+@import './components/group/mp.scss';
+@import './components/buff/buff.scss';
+@import './components/buff/buffQrCode.scss';
+@import './modals/lottery.scss';
+@import './modals/cardDesc.scss';
+@import './modals/toolConfirm.scss';
+@import './modals/scPay.scss';
+@import './modals/tradeReceipt.scss';
+@import './modals/userRuleModal.scss';
+@import './modals/sellModal.scss';
+@import './modals/buyModal.scss';
+@import './modals/buyingModal.scss';
+@import './modals/redEnvModal.scss';
+@import './modals/evaluateModal.scss';
+@import './modals/noteModal.scss';
+@import './modals/invitationModal.scss';
+@import './modals/inviQrCodeModal.scss';
+@import './modals/withdrawModal.scss';
+@import './modals/regiSMS.scss';
+@import './ui/maintain/maintain.scss';
+@import './ui/accountHistoryTable/groupNav.scss';
+@import './contractShop/table/contractShopRecordTable.scss';
+@import './ui/table/depositTable.scss';
+
+
+html, body {
+    font-family: "Microsoft JhengHei", Helvetica, sans-serif;
+    height: 100%;
+    width: 100%;
+    touch-action: manipulation; /* disable iOS double touch zoom in */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html, body, div, section, aside, figure, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    // vertical-align: baseline;
+    background: transparent;
+	text-decoration: none;
+}
+body {
+    line-height: 1;
+    background-color: #ea4742!important;
+}
+
+.app {
+    height: 100%;
+}
+
+table {
+    margin-bottom: 0px!important;
+}
+
+.btn-area-footer {
+    background: white;
+    padding: 15px 0px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin: 0px;
+    @include customMax(500px) {
+        margin: 0px -15px;
+    }
+    button {
+        cursor: pointer;
+    }
+}
+
+body, html {
+    margin: 0px;
+    background: #ea4742;
+}

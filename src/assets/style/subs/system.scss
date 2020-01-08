@@ -1,0 +1,38 @@
+
+.System {
+    @extend %everyPageBackground;
+    min-height: 1000px;
+    .gray-link {
+        margin-top: 0px!important;
+        @extend %gray-link;
+    }
+    @include customMax(500px){
+        padding-bottom: 30px;
+    }
+    .owl-dots {
+        position: relative;
+        bottom: 33px;
+        .owl-dot {
+            span {
+                background-color: white!important;
+            }
+        }
+        .owl-dot.active {
+            span {
+                background: #ea4743!important;
+            }
+        }
+    }
+}
+.waist {
+    // position: relative;
+    // top: -30px;
+    @include flexBox(row-reverse);
+    margin: auto;
+    width: 80%;
+    @include customMax(500px) {
+        width: 100%;
+        // position: relative;
+        // top: -45px;
+    }
+}

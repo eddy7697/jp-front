@@ -1,0 +1,39 @@
+.categoryFilter {
+    @extend %general-width;
+    display: block;
+    margin: auto;
+    select {
+        background: #dcd7d7;
+        height: 30px;
+        @include borderRadius(12px);
+    }
+    display: block;
+    // position: absolute;
+    // top: 115px;
+    @include customMin(500px){
+        top: 71vh;
+    }
+    width: 100%;
+    background-color: #fffce4;
+    z-index: 999999;
+    .near {
+        @extend %contractShopSubNav
+    }
+    div {
+        // margin: auto;
+        display: inline-block;
+        margin-left: 7px;
+    }
+    ul {
+        margin-bottom: 0px;
+        list-style-type: none;
+        h4 {
+            margin: 0px;
+        }
+        li {
+            text-align: left;
+            height: 53px;
+            padding: 15px 0px;
+        }
+    }
+}

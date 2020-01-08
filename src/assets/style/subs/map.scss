@@ -1,0 +1,11 @@
+.mapContent {
+    canvas {
+        width: 1920px;
+    }
+    @include customMax(500px){
+        padding-bottom: 100px;
+    }
+    width: 100%;
+    overflow: scroll;
+    position: relative;
+}

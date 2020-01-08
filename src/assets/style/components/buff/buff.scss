@@ -1,0 +1,41 @@
+.buff {
+    height: 66px;
+    padding-top: 15px;
+    @include customMin(1200px){
+        padding-top: 5px;
+    }
+    .referrer_buff {
+        background: url('~@/assets/images/buff/card_inviteday.png') no-repeat;
+        background-size: cover;
+        height: 80px;
+        width: 350px;
+        p{
+            position: absolute;
+            top: 50px;
+            left: 100px;
+            color: white;
+        }
+    }
+    .referrer_tree_buff {
+        background: url('~@/assets/images/buff/card_inviteday.png') no-repeat;
+        background-size: cover;
+        height: 80px;
+        width: 350px;
+        p{
+            position: absolute;
+            top: 50px;
+            left: 100px;
+            color: white;
+        }
+    }
+   
+    .buffDiv {
+        position: relative;
+        width: auto;
+        max-width: 350px;
+        cursor: pointer;
+        display: block;
+        margin: auto;
+        margin-top: 5px;
+    }
+}

@@ -1,0 +1,579 @@
+.NaviBar-Pc {
+    position: relative;
+    z-index: 999999;
+    .naviBarIcons {       
+        position: relative;
+        z-index: 3;
+        top: 1px;
+        width: 100%;
+        height: 50px;
+        .icons {
+            text-align: center;
+            .logo {
+                height: 50px;
+                // max-width: 150px;
+                width: auto!important;
+                margin-left: 10vw;
+            }
+            width: 100%;
+            .icon {
+                img {
+                    width: 40px;
+                    max-width: 40px;  
+                }
+                width: 40px;
+                padding: 0px;
+                margin: 5px;
+                .notified_untrade {
+                    color: white;
+                    background: red;
+                    @include borderRadius(50%);
+                    width: 25px;
+                    height: 25px;
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+    }
+    height: 170px;
+    @include md {
+        height: 150px;
+    }
+    @include customMax(500px){
+        padding-bottom: 100px;
+    }
+    min-width: 575px;
+    @extend %customBkImage;
+    @include xs {
+        display: none;
+    }
+    #pc-nav-content {
+        background-color:transparent;
+        min-width: 575px;
+        max-width: 1000px;
+        margin: auto;
+        position: relative;
+        top: 0;
+        .row {
+            width: 100%;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .right-nav {
+            width: 80%;
+            .nav-round-icon {
+                @include md {
+                    width: 60px;
+                    text-align: center;
+                }
+                width: 100px;
+                display: block;
+                height: 65px;
+                margin-right: 15px;
+                padding-top: 5px;
+                float: right;
+                color: white;
+                img {
+                    width: 50px;
+                }
+                span {
+                    margin-left: 1px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .logo {
+            width: 20%;
+            cursor: pointer;
+            margin: auto;
+            @include customMax(500px) {
+                margin-left: 10vw;
+            }
+        }
+    }
+    #avatar_space {
+        @include flexBox(row);
+        width: 33%;  
+        margin-top: 5px;   
+        max-width: 260px; 
+        #userStatus {
+            background: url('~@/assets/images/portfolio/user_bg.png') no-repeat;
+            background-size: 100%;
+            width: 250px;
+            position: relative;
+            top: 7px; 
+            @include md {
+                width: 200px;
+                min-width: 200px;
+            }       
+        }
+        .level_web_icon {
+            width: 56px;
+            position: relative;
+            left: 93px;
+            top: 9px;   
+            @include md {
+                width: 50px;
+                position: relative;
+                left: 72px;
+                top: 5px;
+                @include landscape {
+                    top: 5px;
+                }
+            }     
+        }
+        .avatar_icon {
+            width: 86px;
+            position: relative;
+            left: 11px;
+            top: -61px;
+            cursor: pointer;
+            @include md {
+                top: -61px;
+                width: 65px;
+                left: 10px;
+                @include landscape {
+                    top: -66px;
+                    width: 65px;
+                    left: 11px;                
+                }
+            }   
+        }
+        .diamond_icon {
+            width: 25px;
+            position: relative;
+            left: 90px;
+            top: 0px;
+            @include md {
+                width: 25px;
+                position: relative;
+                left: 68px;
+                top: -3px;   
+                @include landscape {
+                    top: -2px;
+                }         
+            }
+        }
+        .level_txt {
+            position: relative;
+            left: 94px;
+            color: white;
+            font-weight: bold;
+            top: 2px;
+            @include md {
+                position: relative;
+                left: 66px;
+                color: white;
+                font-weight: bold;
+                top: -1px;
+                font-size: 14px;
+                @include landscape {
+                    top: -2px;
+                }
+            }
+        }
+        .name_txt {
+            position: relative;
+            top: 50px;
+            width: 100px;
+            display: inline-block;
+            height: 57px;
+            color: #008cc8;
+            right: -23px;
+            @include md {
+                width: auto;
+                left: -15px;
+                top: 31px;
+                font-size: 14px;
+                @include landscape {
+                    top: 40px;
+                    width: 90px;
+                    display: inline-block;                
+                }
+            }
+        }
+    }
+    #sideNav {
+        width: 67%;
+        .row {
+            height: 44%;
+            padding-top: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            line-height: 25px;
+            color: white;
+            @include flexBox(row);
+            @include flexAlign(baseline, space-around);
+            @include lg {
+                top: 7px;
+            }
+        }
+        #firstSideNav span {
+            background: url('~@/assets/images/navibar/web-nav-line.png') no-repeat;
+            background-size: contain;
+            width: 20%;
+            text-align: center;
+            cursor: pointer;
+        }
+        #firstSideNav {
+            padding-top: 25px;
+            line-height: 40px;
+            @include customMax(1200px) 
+            {
+                line-height: 25px;
+            }
+            .active {
+                background: url('~@/assets/images/navibar/web-nav-hover.png') no-repeat;
+                background-size: 100%;
+                width: 20%;
+                text-align: center;
+                cursor: pointer;
+                height: 45px;
+                color: #dc3545;
+                font-weight: bold;
+            }
+        }
+        #secondSideNav span {
+            width: 25%;
+            height: 50px;
+            .number {
+                position:relative;
+                top: 12px;
+                padding-left: 25%;
+                color: #424242;
+                @include lg {
+                    top: 6px;
+                }
+                @include md {
+                    top: 1px;
+                    font-size: 14px;
+                }
+            }
+        }
+        #gift_coin {
+            background: url('~@/assets/images/coins/gift_coin.png') no-repeat;
+            background-size: 100%;
+
+        }
+        #bonus_coin {
+            background: url('~@/assets/images/coins/bonus_coin.png') no-repeat;
+            background-size: 100%;
+        }
+        #gold_coin {
+            background: url('~@/assets/images/coins/gold_coin.png') no-repeat;
+            background-size: 100%;
+        }
+        #entertain_coin {
+            background: url('~@/assets/images/coins/entertain_coin.png') no-repeat;
+            background-size: 100%;
+        }
+
+    }
+}
+
+.naviBarMobile {
+    position: relative;
+    z-index: 99999999999;
+    height: 61px;
+    .naviBarIcons {       
+        position: absolute;
+        z-index: 3;
+        top: 1px;
+        width: 100%;
+        height: 50px;
+        .icons {
+            text-align: center;
+            .toggleNavState {
+                position: fixed!important;
+                z-index: 998;
+            }
+            .logo {
+                height: 50px;
+                // max-width: 150px;
+                margin: auto;
+                @include customMax(500px) {
+                    margin-left: 10vw;
+                }
+            }
+            width: 100%;
+            .icon {
+                img {
+                    width: 40px;
+                    max-width: 40px;  
+                }
+                width: 40px;
+                padding: 0px;
+                margin: 5px;
+                .notified_untrade {
+                    color: white;
+                    background: red;
+                    @include borderRadius(50%);
+                    width: 25px;
+                    height: 25px;
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    @extend %customBkImage;
+    display: none;
+    @include xs {
+        display: block;
+    }
+    height: 115px;
+    min-width: 320px;
+    // overflow: hidden;
+    .mobileNav {
+        margin: auto;
+        position: relative;
+        z-index: 999;
+        min-width: 320px;
+        height: 0px;
+        top: 22px;
+        @include flexBox(row);
+        @include flexAlign(baseline, center);
+        .user-area {
+            cursor: pointer;
+            width: 150px;
+            min-width: 150px;
+            background: url('~@/assets/images/portfolio/user_bg.png') no-repeat;
+            background-size: 100%;
+            height: 61px;
+        }
+        .level_icon {
+            position: relative;
+            left: 54px;
+            width: 37px;
+            top: 4px;
+        }
+        .coins-area {
+            width: 225px;
+            min-width: 225px;
+            position: relative;
+            top: 35px;        
+            span {
+                width: 50%;
+                height: 50%;
+                float: left;
+                .number {
+                    color: #0e376a;
+                    font-size: 12px;
+                    padding-left: 26px;
+                    height: 27px;
+                    padding-top: 6px;
+                    font-weight: bold;
+                }
+            }
+        }
+        .diamond_icon {
+            width: 18px;
+            position: relative;
+            left: 50px;
+            top: -2px;        
+        }
+        .avatar_icon {
+            cursor: pointer;
+            position: relative;
+            left: 7px;
+            top: -48px;
+            width: 50px;
+        }
+        .level_txt {
+            color: white;
+            position: relative;
+            left: 50px;
+            top: 0px;
+            font-weight: bold;
+            font-size: 12px;        
+        }
+        .name_txt {
+            color: #008cc8;
+            position: relative;
+            // top: 30px;
+            display: block;
+            font-weight: bold;
+            left: 65px;
+            font-size: 12px;
+            overflow: hidden;
+            width: 120px;
+            max-width: 120px;
+        }
+        #gift_coin {
+            background: url('~@/assets/images/coins/gift_coin.png') no-repeat;
+            background-size: 100%;
+
+        }
+        #bonus_coin {
+            background: url('~@/assets/images/coins/bonus_coin.png') no-repeat;
+            background-size: 100%;
+        }
+        #gold_coin {
+            background: url('~@/assets/images/coins/gold_coin.png') no-repeat;
+            background-size: 100%;
+        }
+        #entertain_coin {
+            background: url('~@/assets/images/coins/entertain_coin.png') no-repeat;
+            background-size: 100%;
+        }
+    }
+}
+
+// Variables
+$white: #fff !default;
+$black: #000 !default;
+$font-family-base: sans-serif;
+$transition: .3s ease !default;
+$height: 2rem;
+$width: 2rem;
+
+
+.hamburger {
+  position: relative;
+  width: $height;
+  height: $width;
+  left: 10px;
+  top: 7px;
+  cursor: pointer;
+
+  &__bar {
+    &, &:before, &:after {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 4px;
+      content: '';
+      transform: rotate(0);
+      pointer-events: none;
+      background-color: $white;
+    }
+  }
+}
+
+// Hamburger V1
+.hamburger--v1 {
+  .hamburger__bar {
+    top: 50%;
+    transform: translateY(-50%);
+
+    &, &:before, &:after {
+      transition: all .2s;
+    }
+
+    &:before, &:after {
+      transform: rotate(0);
+    }
+
+    &:before {
+      top: $height / 3;
+    }
+
+    &:after {
+      top: -($height / 3);
+    }
+  }
+
+  &.is-active {
+    .hamburger__bar {
+      background-color: transparent;
+
+      &:before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+// Hamburger V2
+.hamburger--v2 {
+  .hamburger__bar {
+    top: 50%;
+    transform: translateY(-50%);
+
+    &, &:before, &:after {
+      transition: top .2s .2s,left .1s,transform .2s,background-color .2s .1s;
+    }
+
+    &:before, &:after {
+      transform: rotate(0);
+    }
+
+    &:before {
+      top: $height / 3;
+    }
+
+    &:after {
+      top: -($height / 3);
+    }
+  }
+
+  &.is-active {
+    .hamburger__bar {
+      background-color: transparent;
+
+      &:before, &:after {
+        top: 0;
+        transition: background-color .2s,top .2s,left .2s,transform .2s .15s;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+// Hamburger V3
+.hamburger--v3 {
+  .hamburger__bar {
+    top: 50%;
+    transform: translateY(-50%);
+
+    &, &:before, &:after {
+      transition: all .2s;
+    }
+
+    &:before, &:after {
+      transform: rotate(0);
+    }
+
+    &:before {
+      top: $height / 3;
+    }
+
+    &:after {
+      top: -($height / 3);
+    }
+  }
+
+  &.is-active {
+    .hamburger__bar {
+      background-color: transparent;
+
+      &:before {
+        top: 0;
+        transform: rotate(135deg);
+      }
+
+      &:after {
+        top: 0;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+}
+

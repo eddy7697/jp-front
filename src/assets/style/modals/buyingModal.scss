@@ -1,0 +1,6 @@
+.buyingModal {
+    @extend %tradeModalCustom;
+    .content {
+        background: white;
+    }
+}

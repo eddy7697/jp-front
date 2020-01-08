@@ -1,0 +1,130 @@
+.tradeArea {
+    width: 60%;
+    height: 270px;
+    max-width: 1000px;
+    padding: 15px 0px;
+    position: relative;
+    @include customMax(1200px) {
+        width: 100%;
+    }
+    margin: auto;
+    .price-area {
+        width: 65%;
+        float: left;
+        margin: auto;
+        .center {
+            display: block;
+            margin: auto;
+            @include customMax(767px) {
+                width: 600px;
+            }
+        }
+        h2 {
+            position: absolute;
+            @extend %digitalFont;
+            @include xl {
+                font-size: 62px;
+            }
+        }
+        .newest {
+            left: 230px;
+            top: 85px;
+            z-index: 1;
+            color: #e79714;
+            font-weight: bold;
+            @include xl {
+                top: 68px;
+            }
+            @include customMax(650px) {
+                top: 20px;
+                left: 150px;
+                font-size: 30px;
+            }
+        }
+        .balance {
+            left: 230px;
+            top: 170px;
+            z-index: 1;
+            color: #14e0da;
+            font-weight: bold;
+            @include xl {
+                top: 168px;
+            }
+            @include customMax(767px) {
+               top: 175px;
+            }
+            @include customMax(650px) {
+                top: 77px;
+                left: 150px;
+                font-size: 30px;
+            }
+        }
+
+        @include customMax(767px) {
+            width: 100%;
+        }
+        #tradePanel {
+            width: 620px;
+            position: relative;
+            top: 0px;
+            left: -75px;
+            @include customMax(1200px) {
+                width: 550px;
+                left: 0px;
+                top: 12px!important;
+            }
+            @include customMax(650px) {
+                width: 350px;
+                top: -28px!important;
+            }
+        }
+        #UCoin {
+            width: 120px;
+            position: absolute;
+            z-index: 1;
+            top: 75px;        
+            @include customMax(1200px) {
+                width: 100px;
+                left: 70px;
+                top: 85px;                       
+            }
+            @include customMax(650px) {
+                width: 80px;
+                left: 35px;
+                top: 10px;
+            }              
+        }
+    }
+    
+    .trade-button {
+        width: 30%;
+        float: left;
+        height: 244px;
+        padding-top: 4%;
+        @include customMax(767px) {
+            width: 100%;
+            position: relative;
+            top: -20px;
+            height: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        img {
+            cursor: pointer;
+            width: 90%;
+            margin: 10px 0px;
+            float: left;
+            max-width: 200px;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.65);
+            border-radius: 8px;
+            @include customMax(767px) {
+                width: 45%;
+                margin: auto;
+                float: none;
+                display: inline;
+                margin: 15px 0px;
+                margin-left: 3%;
+            }
+        }
+    }
+}

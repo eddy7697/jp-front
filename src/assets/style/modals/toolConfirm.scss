@@ -1,0 +1,22 @@
+.toolConfirmModal {
+    @extend %customModalScss;
+    .content {
+        background: white;
+        .container {
+            margin-top: 30px;
+            padding: 0 30px;
+        }
+        #cardContentDesc {
+            display: block;
+            margin: auto;
+            height: 400px;  
+            overflow: hidden!important;      
+        }
+        #btnFooter {
+            margin: 15px 0px;
+            button {
+                margin-left: 15px;
+            }
+        }
+    }
+}

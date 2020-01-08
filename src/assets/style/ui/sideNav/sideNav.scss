@@ -1,0 +1,50 @@
+.sideNav {
+    @extend %customBkImage;
+    width: 50%;
+    max-width: 200px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 170px;
+    z-index: 12;
+    min-height: 100vh;
+    height: 1000%;
+    // display: none;
+    @include customMin(500px) {
+        overflow: auto;
+    }
+    overflow: scroll;
+    a {
+        color: white;
+    }
+    @include customMax(500px) {
+        display: block;
+        overflow: scroll;
+        padding-top: 135px;
+    }
+    ul {
+        list-style-type: none;
+        margin-top: 1vh;
+        height: 400px;
+        overflow: scroll;
+        @include customMin(500px) {
+            overflow: auto;
+        }
+        li {
+            width:100%;
+            div {
+                padding-top: 10px;
+                margin: auto;
+                width: 100%;
+                color: white;
+                height: 50px;
+                text-align: left;
+                padding-left: 15px;
+                border-bottom: 1px solid white;
+                img {
+                    width: 25px;
+                }
+            }
+        }
+    }
+}

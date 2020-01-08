@@ -1,0 +1,44 @@
+#Registration, #RegistrationRules {
+    background: url('~@/assets/images/background/newbie-bg.jpg') center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    .regiForm {
+        small {
+            margin-top: 5px;
+        }
+        padding: 20px 0px;
+        background: white;
+        @include radius(12px);
+        width: 60%;
+        margin: auto;
+        margin-top: 130px;
+        @include customMax(500px) {
+            width: 100%;
+        }
+        .form-group {
+            width: 100%;
+        }
+        .fieldset {
+            width: 100%;
+        }
+        #country_codes {
+            margin-bottom: 20px;
+            @include customMax(500px) {
+                min-width: 200px;
+            }
+        }
+        .sure-area {
+            padding-top: 15px;
+        }
+        button:disabled,
+        button[disabled]{
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;
+        }
+        .btn-primary {
+            background-color: #E84541;
+            border-color: #dc3545;
+        }
+    }
+}

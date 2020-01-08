@@ -1,0 +1,8 @@
+.groupNav {
+    .active {
+        background: #dc3545;
+        &:after {
+            border-top: solid 10px #dc3545;
+        }
+    }
+}

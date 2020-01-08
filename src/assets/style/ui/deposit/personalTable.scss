@@ -1,0 +1,42 @@
+.personalTable {
+    padding: 20px 0px;
+    .content {
+        background-color: white;
+        padding-bottom: 10px;
+
+        @include borderRadius(12px);
+        .col-12 {
+            border-bottom: 1px solid gray;
+            .name {
+                height: auto;
+                text-align: left;
+                // padding-top: 50px;
+                font-size: 20px;
+                width: 40vw;
+                @include customMax(1300px) {
+                    width: 100%;
+                }
+                line-height: 3;
+                margin: auto;
+            }
+            .pull-right {
+                float: right;
+                // position: relative;
+                // top: -25px;
+                font-size: 12px;            
+                @extend %blue-link;
+                margin: 15px;
+                font-size: 20px;
+                letter-spacing: 5px;
+                cursor: pointer;  
+                width: auto;
+                padding: 10px;
+                padding-top: 2px;
+                padding-right: 5px;
+            }
+            .avatar {
+                width: 45px;
+            }
+        }
+    }
+}

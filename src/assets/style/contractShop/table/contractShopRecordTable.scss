@@ -1,0 +1,25 @@
+.contractShopRecordTable {
+    @extend %general-width;
+    overflow: scroll;
+    background: #faffed;
+    // overflow-x: hidden;
+    @include customMax(500px) {
+        padding-bottom: 100px;
+    }
+    button {
+        min-width: 80px;
+        font-size: 1.2rem;
+    }
+    .table {
+        background: #faffed;
+        color: black;
+        min-width: 802px;
+        margin-bottom: 0px;
+    }
+    .footer {
+        @extend %contractShopBg;
+        @extend %general-width;
+        padding: 10px;
+        min-width: 802px;
+    }
+}

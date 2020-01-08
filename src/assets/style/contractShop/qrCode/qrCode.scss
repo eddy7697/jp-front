@@ -1,0 +1,34 @@
+.qrCode {
+    @extend %modalBackground;
+    .content {
+        max-width: 375px;
+        background: url('~@/assets/images/qrCodeImages/tradeQr.png') no-repeat;
+        background-size: cover;
+        background-position-y: -35px;
+        // max-width: 700px;
+        padding-top: 50px;
+        width: 100%;
+        height: 500px;
+        // background-color: green;
+        @include radius(12px);
+        margin: auto;
+        margin-top: 100px;
+        .text-white {
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 23px;
+        }
+        #canvas {
+            display: block;
+            margin: auto;
+            margin-top: 70px;
+        }
+        .cancel {
+            position: relative;
+            top: -43px;
+            left: 10px;
+            cursor: pointer;
+            width: 30px;
+        }
+    }
+}

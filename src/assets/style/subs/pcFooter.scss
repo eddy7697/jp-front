@@ -1,0 +1,30 @@
+.pcFooter {
+    @include customMax(500px) {
+        padding-top: 5px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    height: 110px;
+    background:#ea4742;
+    color: white;
+    img {
+        display: block;
+        width: 500px;
+        margin: auto;
+        @include customMax(500px) {
+            width: 375px;
+        }
+    }
+    .row {
+        padding-top: 5px;
+    }
+    a {
+        color: white;
+        &:hover {
+            color: white;
+        }
+    }
+    p {
+        margin: 0px;
+    }
+}

@@ -1,0 +1,154 @@
+.login {
+    background: url('~@/assets/images/pages/login/login_bg.jpg?v=1') no-repeat center center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    ::-webkit-input-placeholder { /* Edge */
+        color: #b0b0b0;
+        font-weight: 400;
+    }
+    
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #b0b0b0;
+        font-weight: 400;
+    }
+    
+    ::placeholder {
+        color: #b0b0b0;
+        font-weight: 400;
+    }
+    #content {
+        
+    }
+    .login-form {
+        background-color: #f3f3f3e6;
+        // opacity: 0.9;
+        width: 90%;
+        padding: 15px;
+        margin-top: 40vh;
+        margin: 30vh auto;
+        position: relative;
+        top: 5%;
+        .link-word {
+            color: #00ab8e;
+            cursor: pointer;
+            font-weight: bold;
+            float: right;
+            @include customMax(500px) {
+                // position: relative;
+                // top: 10px;
+                // width: 10%;
+                // display: block;
+            }
+        }
+        @include borderRadius(12px);
+        @include xl {
+            width:  55%;
+            padding: 35px;
+            margin-top: 40vh;
+            top: 0%;
+        }
+        input {
+            width: 90%;
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid black;
+            @include xs {
+                width: 80%;
+            }
+        }
+        label {
+            width: 10%;
+            @include xs {
+                width: 20%;
+            }
+        }
+        form {
+            @include xl {
+                width: 450px;
+                margin: auto;
+            }
+        }
+        .remember-area {
+            line-height: 17px;
+            @include grid_wrapper(row);
+            div:first-child {
+                flex: 2;
+            }
+            div:nth-child(2) {
+                flex: 4;
+                margin-left: 15px;
+            }
+            div {
+                width: 33.3%;
+                @include xs {
+                    width: 50%;
+                }
+            }
+            input {
+                float: left;
+                width: auto;
+                margin-right:5px;
+            }
+        }
+        #captcha_text {
+            width: 20%;
+        }
+        #login-button {
+            @include customButton(100%, 60px);
+            margin-left: 10px;
+        }
+        #freeToGo {
+            @include customButton(100%, 60px);
+            background-image: -moz-linear-gradient(-180deg, #36d8bc 0%, #339a4e 100%);
+            background-image: -webkit-linear-gradient(-180deg, #36d8bc 0%, #339a4e 100%);
+            background-image: -ms-linear-gradient(-180deg, #36d8bc 0%, #339a4e 100%);
+            background-image: linear-gradient(-180deg, #36d8bc 0%, #339a4e 100%);
+        }
+        #forget-password {
+            color:#58595B;
+            cursor: pointer;
+        }
+        .webSiteFont {
+            @extend %hyperLink;
+        }
+        .copyright {
+            img {
+                display: inline;
+                width: 25px;
+            }
+            @include xs {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .forgetPassword {
+        input {
+            width: 80%;
+            @include xs {
+                width: 70%;
+                min-width: 270px;
+            }
+        }
+        label {
+            width: 20%;
+            @include xs {
+                width: 30%;
+                min-width: 300px;
+            }
+        }
+        select {
+            border: 1px solid gray;
+            @include xs {
+                min-width: 150px;
+            }
+        }
+        p {
+            margin-bottom: 25px;
+        }
+    }
+    
+}
+
+

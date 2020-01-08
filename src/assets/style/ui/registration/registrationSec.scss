@@ -1,0 +1,7 @@
+.registrationSec {
+    position: relative;
+    top: 120px;
+    .registrationNav {
+       @extend %secondNavScss; 
+    }
+}

@@ -1,0 +1,50 @@
+.chart {
+    #chart-container {
+        background: white;
+        overflow: scroll;
+        margin-bottom: 30px;
+    }
+    .orgchart-container {
+        border: none!important;
+        height: 1400px;
+    }
+    .orgchart {
+        background: none;
+    }
+    #arrowLeft {
+        color: white;
+        position: fixed;
+        right: 10px;
+        font-size: 50px;
+        bottom: 90px;
+        z-index: 999999;
+    }
+    #search {
+        color: white;
+        position: fixed;
+        right: 10px;
+        bottom: 155px;
+        font-size: 50px;
+        z-index: 999999;
+    }
+    #searchInput {
+        background: white;
+        width: 250px;
+        height: 50px;
+        position: fixed;
+        z-index: 999999;
+        border: 1px solid gray;
+        bottom: 155px;
+        right: 65px;
+        input {
+            height: 100%;
+        }
+    }
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}

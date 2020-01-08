@@ -1,0 +1,10 @@
+.toolRecord {
+    margin-top: 20px;
+    @extend %dark-head-table;
+    .btn-area-footer {
+        margin: 0px;
+    }
+    @include customMax(500px) {
+        margin: 0px -15px;
+    }
+}

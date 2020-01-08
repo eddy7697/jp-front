@@ -1,0 +1,30 @@
+.qrCodeScan {
+    @extend %customModalScss;
+    .wrapper {
+        max-height: 300px;
+    }
+    .content {
+        padding-top: 10px;
+        #alignBox {
+            @include flexBox(row);
+            @include flexAlign(baseline, center);
+        }
+        button {
+            background: green;
+            color: white;
+            margin: auto;
+            margin-top: 30%;
+            width: 40%;
+        }
+    }
+    img {
+        width: 100%;
+    }
+    .error {
+        font-weight: bold;
+        color: red;
+    }
+    p {
+        margin: 0px;
+    }
+}   

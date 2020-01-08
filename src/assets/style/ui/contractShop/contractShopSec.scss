@@ -1,0 +1,13 @@
+.contractShopSec {
+    height: 0px;
+    .contractNav {
+       @extend %contractSecNavScss; 
+    }
+    @include customMin(500px) {
+        height: 20px;
+        margin-top: 25px;
+    }
+    @include customMin(1400px) {
+        margin-top: 70px;
+    }
+}

@@ -1,0 +1,25 @@
+.authBuyModal {
+    @extend %tradeModalCustom;
+    h4 {
+        color: white;
+    }
+    label {
+        color: white;
+    }
+    .col-10 {
+        background: white;
+        height:50px;
+        margin-left: 15px;
+        padding:0px;
+        margin-left: 30px;
+    }
+    .content {
+        width: 100%;
+        overflow: hidden;
+        background-image: -moz-linear-gradient(to bottom, #008CC8, #066b96);
+        background-image: -webkit-linear-gradient(to bottom, #008CC8, #066b96);
+        background-image: -ms-linear-gradient(to bottom, #008CC8, #066b96);
+        background-image: linear-gradient(to bottom, #008CC8, #066b96);
+        height: 1000px;
+    }
+}

@@ -1,0 +1,36 @@
+.editUserForm {
+    @extend %everyPageBackground;
+
+    min-height: 900px;
+    @include customMax(500px){
+        padding-bottom: 300px;
+    }
+    .content {
+        #get_code {
+            margin-top: 0px;
+            height: 38px;
+            min-width: 140px;
+        }
+        .date-dropdown-container {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+        margin-top: 50px;
+        background: white;
+        @include radius(12px);
+        margin: auto;
+        margin-top: 40px;
+        width: 80%;
+        padding: 20px;
+        button {
+            @extend %blue-link;
+        }
+        
+        @include customMax(500px) {
+            width: 100%;
+            .form-group {
+                // margin: 0px;
+            }
+        }
+    }
+}

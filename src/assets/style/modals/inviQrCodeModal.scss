@@ -1,0 +1,98 @@
+.inviQrCodeModal {
+    @extend %modalBackground;
+    .content {
+        max-width: 500px;
+        padding-top: 50px;
+        width: 80%;
+        height: 500px;
+        background-image: linear-gradient(90deg, rgb(139, 94, 161) 10%, rgb(151, 110, 171) 26%, rgb(162, 126, 180) 59%, rgb(171, 146, 183) 100%);
+        background-image: -moz-linear-gradient(90deg, rgb(139, 94, 161) 10%, rgb(151, 110, 171) 26%, rgb(162, 126, 180) 59%, rgb(171, 146, 183) 100%);
+        background-image: -webkit-linear-gradient(90deg, rgb(139, 94, 161) 10%, rgb(151, 110, 171) 26%, rgb(162, 126, 180) 59%, rgb(171, 146, 183) 100%);        @include radius(12px);
+        margin: auto;
+        margin-top: 100px;
+        #canvas {
+            display: block;
+            margin: auto;
+        }
+        .cancel {
+            position: relative;
+            top: 0px;
+            left: 10px;
+            cursor: pointer;
+        }
+    }
+}
+.moveTreeModal {
+    @extend %modalBackground;
+    .content {
+        max-width: 500px;
+        padding-top: 50px;
+        width: 80%;
+        height: 500px;
+        background-image: linear-gradient(90deg, rgb(139, 94, 161) 10%, rgb(151, 110, 171) 26%, rgb(162, 126, 180) 59%, rgb(171, 146, 183) 100%);
+        background-image: -moz-linear-gradient(90deg, rgb(139, 94, 161) 10%, rgb(151, 110, 171) 26%, rgb(162, 126, 180) 59%, rgb(171, 146, 183) 100%);
+        background-image: -webkit-linear-gradient(90deg, rgb(139, 94, 161) 10%, rgb(151, 110, 171) 26%, rgb(162, 126, 180) 59%, rgb(171, 146, 183) 100%);        @include radius(12px);
+        margin: auto;
+        margin-top: 100px;
+        #canvas {
+            display: block;
+            margin: auto;
+        }
+        .cancel {
+            position: relative;
+            top: -30px;
+            left: 10px;
+            cursor: pointer;
+        }
+    }
+}
+.qrGroupCode {
+    @extend %modalBackground;
+    .content {
+        max-width: 500px;
+        padding-top: 50px;
+        width: 80%;
+        height: 500px;
+        background-image: linear-gradient(90deg, rgb(139, 94, 161) 10%, rgb(151, 110, 171) 26%, rgb(162, 126, 180) 59%, rgb(171, 146, 183) 100%);
+        background-image: -moz-linear-gradient(90deg, rgb(139, 94, 161) 10%, rgb(151, 110, 171) 26%, rgb(162, 126, 180) 59%, rgb(171, 146, 183) 100%);
+        background-image: -webkit-linear-gradient(90deg, rgb(139, 94, 161) 10%, rgb(151, 110, 171) 26%, rgb(162, 126, 180) 59%, rgb(171, 146, 183) 100%);        @include radius(12px);
+        margin: auto;
+        margin-top: 100px;
+        #canvas {
+            display: block;
+            margin: auto;
+        }
+        .cancel {
+            position: relative;
+            top: 0px;
+            left: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+.openGroupModal {
+    @extend %modalBackground;
+    .content {
+        max-width: 500px;
+        padding-top: 50px;
+        width: 80%;
+        height: 500px;
+        background-image: linear-gradient(90deg, rgb(139, 94, 161) 10%, rgb(151, 110, 171) 26%, rgb(162, 126, 180) 59%, rgb(171, 146, 183) 100%);
+        background-image: -moz-linear-gradient(90deg, rgb(139, 94, 161) 10%, rgb(151, 110, 171) 26%, rgb(162, 126, 180) 59%, rgb(171, 146, 183) 100%);
+        background-image: -webkit-linear-gradient(90deg, rgb(139, 94, 161) 10%, rgb(151, 110, 171) 26%, rgb(162, 126, 180) 59%, rgb(171, 146, 183) 100%);        @include radius(12px);
+        margin: auto;
+        margin-top: 100px;
+        color: white;
+        #canvas {
+            display: block;
+            margin: auto;
+        }
+        .cancel {
+            position: relative;
+            top: 0px;
+            left: 10px;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.category {
+    @extend %contractShopBg;
+    @extend %general-width;
+    @include customMax(500px){
+        padding-bottom: 100px;
+    }
+    .near {
+        font-size:16px;
+        padding: 3px;
+    }
+    .cursorPtn {
+        cursor: pointer;
+        color: #007bff;
+    }
+    .item {
+        @extend %contractShopBg;
+        @extend %general-width;
+        border-top: 2px solid #ddd;
+        border-bottom: 2px solid #ddd;
+        @include flexBox(row);
+        @include flexAlign(stretch, flex-start);
+        padding: 5px 0px;
+        cursor:pointer;
+
+        .recommend {
+            width: 35px;
+            position: relative;
+            float: right;
+            margin-right: 10px;
+        }
+        div {
+            .shopNumber {
+                position: absolute;
+                z-index: 22;
+                color: white;
+                padding-left: 0.5em;
+                padding-top: 0.2em;
+                font-weight: bold;
+                text-shadow: #063107 0.1em 0.1em 0.2em;
+                letter-spacing: 0.1em;
+                width: 85px;
+            }
+            .greenTag {
+                position: absolute;
+                width: 20vw;
+                max-width: 100px;
+                max-height: 25px;
+            }
+            width: 50%;
+            .photo {
+                width: 100%;
+            }
+            max-width: 350px;
+            ul {
+                padding-left: 10px;
+                list-style: none;
+                li {
+                    h2 {
+                        @include customMax(500px) {
+                            font-size: 1rem;
+                        }
+                    }
+                    .icon {
+                        @include customMax(500px) {
+                            width: 15px;
+                        }
+                    }
+                    margin: 5px 0px;
+                }
+                .like-icon {
+                    position: relative;
+                    float: right;
+                    width: 25px;
+                    margin-right: 10px;
+                    cursor: pointer;
+                    z-index: 11111;
+                }
+            }
+        }
+    }
+    button {
+        background: #E84541;
+        border: 1px solid #dc3545;
+        color: white;
+    }
+    button:hover {
+        color: white;
+        background: #a92e2b;
+        border: 1px solid #a92e2b;
+    }
+    .footer {
+        @extend %contractShopBg;
+        @extend %general-width;
+        padding: 10px;
+    }
+    .hidden {
+        display: none;
+    }
+}

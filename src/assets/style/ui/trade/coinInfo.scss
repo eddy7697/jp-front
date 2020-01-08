@@ -1,0 +1,160 @@
+.Trade {
+    @extend %everyPageBackground;
+    min-height: 1000px;
+    @include customMax(500px){
+        padding-bottom: 100px;
+    }
+    .coinInfoMobile {
+
+        position: relative;
+        top: 30px;
+        display: none;
+        @include xs {
+            display: block;
+        }
+        .buyingButton {
+            background: -o-linear-gradient(180deg, #fff3a6 0%, #dcb64e 50%, #b57e10 100%);
+            background: -ms-linear-gradient(180deg, #fff3a6 0%, #dcb64e 50%, #b57e10 100%);
+            background: linear-gradient(180deg, #fff3a6 0%, #dcb64e 50%, #b57e10 100%);
+            font-size: 16px;
+            @include borderRadius(20px);
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-align: center;
+            color: #5a0104;
+            cursor: pointer;
+            padding: 5px 15px;
+            position: relative;
+            top: -5px;
+        }
+        .coinInfoPanel {
+            background: url('~@/assets/images/coinInfo/coinInfo_phone.png') no-repeat;
+            margin: auto;
+            background-size: contain;
+            height: 150px;
+            width: 375px;
+            position: relative;
+        }
+        #UCoin {
+            width: 70px;
+            position: absolute;
+            left: 47px;
+            top: 46px;
+        }
+        .newest-price {
+            @extend %digitalFont;
+            z-index: 1;
+            color: #e79714;
+            font-weight: bold;
+            font-size: 2.2rem;
+            position: absolute;
+            left: 148px;
+            top: 28px;  
+            min-width: 200px; 
+        }
+        .ucoin-balance {
+            @extend %digitalFont;
+            z-index: 1;
+            color: #14e0da;
+            font-weight: bold;
+            font-size: 2.2rem;
+            position: absolute;
+            right: 95px;
+            top: 85px;
+        }
+    }
+    .coinInfoPc {
+        padding-top: 30px;
+        background-color: #00000075;
+        width: 100%;
+        position: relative;
+        @include md {
+            height: 168px;
+        }
+        min-width: 575px;
+        @include xs {
+            display: none;
+        }
+        .currency {
+            position: relative;
+            top: -41px;
+        }
+        .buyingButton {
+            background: -o-linear-gradient(180deg, #fff3a6 0%, #dcb64e 50%, #b57e10 100%);
+            background: -ms-linear-gradient(180deg, #fff3a6 0%, #dcb64e 50%, #b57e10 100%);
+            background: linear-gradient(180deg, #fff3a6 0%, #dcb64e 50%, #b57e10 100%);
+            font-size: 16px;
+            @include borderRadius(20px);
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-align: center;
+            color: #5a0104;
+            cursor: pointer;
+            padding: 5px 15px;
+            position: relative;      
+            left: -80px;
+            top: 17px;
+        }
+        .coinInfoPanel {
+            background: url('~@/assets/images/coinInfo/coinInfo_web.png') no-repeat;
+            height: 200px;
+            margin: auto;
+            background-size: contain;
+            width: 1100px;
+            position: relative;
+
+            @include customMax(1200px) {
+                width: 767px;
+                position: relative;
+            }
+        }
+        .newest-price {
+            @extend %digitalFont;
+            z-index: 1;
+            color: #e79714;
+            font-weight: bold;
+            font-size: 3.2rem;
+            position: absolute;
+            left: 300px;
+            top: 40px; 
+            @include customMax(1200px) {
+                left: 200px;
+                top: 20px; 
+            }       
+        }
+        .ucoin-balance {
+            @extend %digitalFont;
+            z-index: 1;
+            color: #14e0da;
+            font-weight: bold;
+            font-size: 3.2rem;
+            position: absolute;
+            right: 200px;
+            top: 70px;
+            @include customMax(1200px) {
+                right: 80px;
+                top: 45px; 
+            }
+        }
+        .uCoin {
+            position: relative;
+            display: inline-block;
+            margin: auto;
+            left: 500px;
+            top: 40px;
+            @include customMax(1200px) {
+                margin: auto;
+                left: 343px;
+                top: 28px;            
+            }
+            #UCoin {
+                width: 100px;
+                @include customMax(1200px) {
+                    width: 80px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+
+.locked {
+    font-size: 18px;
+    background-color: rgb(168, 167, 167);   
+    color: white;
+}
+
+.locked_handle{
+    background-image: url("~@/plugins/slideToUnlock/css/img/right_arrow.png")!important;  
+}  
+
+
+.unlocked {
+    /* background-color:rgb(128, 131, 128); */
+}
+
+.unlocked_handle{
+    background-image: url("~@/plugins/slideToUnlock/css/img/left_arrow.png")!important;   
+}  

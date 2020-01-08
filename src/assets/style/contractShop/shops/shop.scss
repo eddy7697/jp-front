@@ -1,0 +1,148 @@
+.contractShopCarousel {
+    height: 220px;
+    @include customMin(600px) {
+        height: 400px;
+    }
+    .owl-stage-outer{
+        // height: 150px;
+        @include xl {
+            height: auto!important;
+        }
+    }
+    
+    min-height: 100px;
+    @extend %general-width;
+    .carouselDiv {
+        margin-bottom: 35px;
+    }
+
+    .owl-dot.active {
+        span {
+            background: green!important;
+        }
+    }
+}
+.shop {
+    position:fixed;
+    padding:0;
+    margin:auto;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999999999;
+    background: white;
+    overflow: scroll;
+    .content {
+        button {
+            background: #e84541!important;
+        }
+        button:active {
+            background: #e84541!important;
+        }
+        .del {
+            position: absolute;
+            z-index: 111;
+        }
+        .like-icon {
+            margin-left: 80px;
+            float:right;
+        }
+        img {
+            width: 25px;
+        }
+        ul {
+            @extend %general-width;
+            padding: 20px;
+            list-style: none;
+            li {
+                padding: 5px;
+                #more {
+                    display: block;
+                    margin: auto;
+                }
+                #shopDescContent {
+                    white-space: nowrap; 
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    &.showMore {
+                        div {
+                            white-space: normal; 
+                            overflow: initial;
+                            text-overflow: inherit;
+                        }
+                    }
+                    button {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+        .stars {
+            img {
+                width: 100%;
+            }
+        }
+        .cancel {
+            margin-top: 10px;
+            button {
+                background: #007bff;
+                color: white;
+                cursor: pointer;
+                border: none;
+                margin-bottom: 50px;
+            }
+        }
+        button {
+            background: #e84541;
+            color: white;
+            border: none;
+        }
+        .shopDesc{
+            @extend %general-width;
+            // padding-top: 30px;
+            .recommend {
+                float:right;
+                width: 45px;
+                margin-right: 50px;
+            }
+            .scPay {
+                // float: right;
+                // width: 50px;
+                // position: relative;
+                // top: 0px;            
+            }
+            .shopNumber {
+                position: absolute;
+                z-index: 22;
+                color: white;
+                padding-left: .5em;
+                padding-top: .2em;
+                font-weight: 700;
+                text-shadow: #063107 0.1em 0.1em 0.2em;
+                letter-spacing: .1em;
+            }
+            .greenTag {
+                position: absolute;
+                width: 23vw;
+                max-width: 80px;
+                max-height: 25px;
+            }
+            .business_time {
+                // position: absolute;
+            }
+            .addr {
+                color: blue;
+                cursor: pointer;
+            }
+            .toTradeIcon {
+                width:20vw;
+                position:relative;
+                z-index:99999999999999;
+                margin-top: 30px;
+                max-width: 96px;
+            }
+        }
+
+    }
+}

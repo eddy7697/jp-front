@@ -1,0 +1,49 @@
+.confirmSureReceive {
+    @extend %customModalScss;
+    overflow: scroll;
+    padding-top: 5vh;
+    .content {
+        .del {
+            width: 50px;
+        }
+        @include customMax(320px) {
+            padding: 40px;
+        }
+        i {
+            font-size: 24vw;
+            color: orange;
+            margin-bottom: 20px;
+        }
+        background: white;
+        padding: 10px 8px;
+        button {
+            color: white;
+            display: block;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+        .container {
+            margin-top: 50px;
+            padding-bottom: 40px;
+            min-height: 450px;
+        }
+        .underLine {
+            text-decoration: underline;
+            border-bottom: 1px solid blue;
+            width: 100%;
+        }
+        .row {
+            // padding-top: 50px;
+        }
+        width: 100%;
+        .img-responsive {
+            width: 100%;
+        }
+        h5 {
+            line-height: 1.5;
+        }
+        b {
+            font-size: 24px;
+        }
+    }
+}

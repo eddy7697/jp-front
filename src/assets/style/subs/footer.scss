@@ -1,0 +1,33 @@
+.Footer {
+    position: relative;
+    bottom: 0px;
+    @include flexBox(row);
+    @include flexAlign(baseline, center);
+    @include customMax(500px) {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        z-index: 99999999;
+    }
+    position: relative;
+    z-index: 99999;
+    background: white;
+    height: 65px;
+    padding-top: 0px;
+    width: 100%;
+    display: none;
+    div {
+        cursor: pointer;
+        img {
+            display: block;
+            width: 25px;
+            margin: auto;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        font-size: 13px;
+        width: 20%;
+        text-align: center;
+        color: gray;
+    }
+}

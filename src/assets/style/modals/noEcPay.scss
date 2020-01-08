@@ -1,0 +1,67 @@
+.noEcModal {
+   position: absolute;
+   min-height: 1400px;
+   @extend %customModalScss;
+   overflow: scroll;
+   .depositS {
+       width: 300px;
+       display: block;
+       margin: auto;
+   }
+   h5 {
+       font-size: 22px;
+   }
+   .radio {
+        margin: 10px 0px;
+
+   }
+   #payWay {
+       .btn-primary {
+          float: right;
+       }
+       .btn-success {
+        float: left;
+     }
+   }
+   #desc {
+        span {
+            line-height: 2;
+        } 
+   }
+   .desc {
+       border: 1px solid black;
+   }
+   .content {
+        padding-top: 15px;
+        margin: auto;
+        @include customMax(500px) {
+            width: 100%;
+       }
+       button {
+           margin-left: 30px;
+       }
+       padding-bottom: 70px;
+       ul {
+           label {
+           }
+           li {
+               margin: 15px 0px;
+           }
+       }
+   }
+   .form-group {
+       width: 100%;
+       padding: 5px 10px;
+   }
+   .text-danger {
+       position: absolute;
+       top: 242px;
+       width: 100%;
+       max-width: 500px;
+       text-shadow: 1px 1px white;
+   }
+   button {
+       margin-left: 0px!important;
+       
+   }
+}

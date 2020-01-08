@@ -1,0 +1,8 @@
+.depositTable {
+    @extend %general-width;
+    background: white;
+    overflow: scroll;
+    .container {
+        min-width: 800px;
+    }
+}

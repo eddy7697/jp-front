@@ -1,0 +1,37 @@
+.evaluateModal {
+    @extend %customModalScss;
+    overflow: scroll;
+    .content {
+        .del {
+            position: relative;
+            z-index: 2;
+        }
+        h4 {
+            height: 30px;
+            background: green;
+            color: white;
+            text-align: center;
+            position: relative;
+            top: -28px;
+            z-index: 1;
+            border-top-right-radius: 12px;
+            border-top-left-radius: 12px;
+        }
+        background: #faffed;
+        .container {
+            margin-top: 30px;
+            padding-bottom: 40px;
+            min-height: 450px;
+        }
+        ul {
+            list-style-type: none;
+        }
+        .form-control:disabled, .form-control[readonly] {
+            background-color: #e9ecef;
+        }
+        .btn-success, .btn-primary {
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+    }
+}

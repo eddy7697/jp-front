@@ -1,0 +1,29 @@
+.ContractShop {
+    @extend %everyPageBackground;
+    min-height: 1000px;
+    @include customMax(500px){
+        padding-bottom: 0px;
+    }
+    .carouselDiv {
+        width: 100%;
+        max-height: 400px;
+        img {
+            max-height: 400px;
+            width: 100%;
+        }
+    }
+    .owl-stage-outer {
+        background: black;
+        top: 0px;
+    }
+    .owl-theme .owl-nav {
+        position: relative;
+        top: -25vh;
+        width: 100%;
+        font-weight: bold;
+        @include lg {
+            font-weight: bold;
+            top: -18vh;
+        }
+    }
+}

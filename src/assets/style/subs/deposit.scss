@@ -1,0 +1,79 @@
+.Deposit {
+    @extend %everyPageBackground;
+
+    min-height: 900px;
+    @include customMax(500px){
+        padding-bottom: 300px;
+    }
+}
+
+.depositCards {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .col-sm  {
+        position: relative;
+        height: 150px;
+        padding: 0px;
+        .card {
+            width: auto;
+            background: transparent;
+            margin: auto;
+            border: none;
+            width: 375px;
+        }
+        img {
+            width: 375px;
+            display: block;
+            margin: auto;
+        }
+        .high-img {
+            float: left;
+            position: absolute;
+            top: 0px;
+            left: 0px;        
+            height: 150px;
+            width: 130px;
+        }
+        .hot-img {
+            float: left;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        
+            height: 150px;
+            width: 130px;
+        }
+    }
+    .input-area {
+        position: absolute;
+        top: 20px;
+        color: white;
+        right: 20px;
+        min-width: 230px;
+        .form-group  {
+            margin-bottom: 0px;
+            span {
+                @include customMax(500px) {
+                    font-size: 12px;
+                }
+            }
+            input {
+                height: 25px;
+            }
+        }
+        #amountGold {
+            background: #470364;
+            color: white;
+        }
+        button {
+            background: #cfa52b;
+            color: white;
+            height: 30px;
+            padding: 0px 15px;
+            @include customMax(500px) {
+                font-size: 18px;
+                min-width: 200px;
+            }
+        }
+    }
+}

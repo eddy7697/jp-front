@@ -1,0 +1,90 @@
+.regiSMS {
+    @extend %customModalScss;
+    .content {
+        @include customMax(500px) {
+            width: 100%;
+        }
+        .container {
+            h4 {
+                font-size: 22px;
+            }
+            white-space: nowrap;
+            margin-top: 30px;
+            padding: 0 30px;
+            .row {
+                margin: 15px 0px;
+            }
+            h5 {
+                letter-spacing: 6px;
+            }
+        }
+        #cardContentDesc {
+            display: block;
+            margin: auto;
+            height: 400px;  
+            overflow: hidden!important;      
+        }
+        #btnFooter {
+            margin: 15px 0px;
+            button {
+                margin-left: 15px;
+            }
+        }
+        #recommandLine {
+            margin-top: 15px;
+            p {
+                font-size: 22px;
+                margin: 5px 0px;
+            }
+            .container {
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+.regiSuccess {
+    padding-top: 15px;
+    @extend %customModalScss;
+    .content {
+        width: 350px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        small {
+            margin-top: 55px;
+            display: block;
+            font-size: 16px;
+            .lineSpan {
+                color: #02b706;
+                font-weight: bold;
+            }
+            .fbSpan {
+                color: #425599;
+                font-weight: bold;
+            }
+        }
+        .fb {
+            background:blue;
+            width: 300px;
+            display: block;
+            margin: auto;
+            height: 125px;
+            iframe {
+                height: 125px;
+            }
+        }
+        .line {
+            background:green;
+            width: 300px;
+            height: 130px;
+            display: block;
+            margin: auto;
+            background: url('~@/assets/images/modals/line.jpg') no-repeat;
+            background-size: cover;
+        }
+        h4 {
+            margin-top: 80px;
+            font-size: 14px;        
+        }
+    }
+}

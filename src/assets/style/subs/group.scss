@@ -1,0 +1,7 @@
+.Group {
+    @extend %everyPageBackground;
+    min-height: 1000px;
+    @include customMax(500px){
+        padding-bottom: 300px;
+    }
+}

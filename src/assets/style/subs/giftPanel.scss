@@ -1,0 +1,48 @@
+.giftPanel {
+    @extend %everyPageBackground;
+    @extend %general-width;
+    @include customMax(500px) {
+        .spin-coin {
+            padding-top: 20px;
+        }
+    }
+    .circleRound {
+        @include borderRadius(25px);
+        color: #ea4742;
+        border: 1px solid;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 50%;
+        margin-bottom: 15px;
+        max-width: 200px;
+        @include customMax(500px) {
+           font-size: 12px;
+           padding: 5px;
+        }
+    }
+    #specilRowPadding {
+        padding-top: 8%;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 1.2rem;
+        @include customMax(500px) {
+            padding-top: 30px;
+        }
+        ul {
+            li {
+                list-style-type: none;
+                height: 50px;
+                font-weight: bold;
+                .number {
+                    margin-left: 30px;
+                    float: right;
+                    margin-right: 30px;
+                    @include customMax(500px) {
+                        margin-right: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

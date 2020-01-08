@@ -1,0 +1,13 @@
+.beforeBuyCard {
+    @extend %customModalScss;
+    .content {
+        background: #ffffffd9;
+        #desc {
+            min-height: 400px;
+        }
+        .container {
+            margin-top: 30px;
+            padding: 0 30px;
+        }
+    }
+}

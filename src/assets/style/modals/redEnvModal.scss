@@ -1,0 +1,23 @@
+.redEnvModal {
+    @extend %tradeModalCustom;
+    h4 {
+        color: white;
+    }
+    label {
+        color: white;
+    }
+    .col-10 {
+        background: white;
+        height:50px;
+        margin-left: 15px;
+        padding:0px;
+        margin-left: 30px;
+    }
+    .content {
+        background: #e900b8;
+    }
+    input {
+        height: 40px;
+        @include borderRadius(0px);
+    }
+}
