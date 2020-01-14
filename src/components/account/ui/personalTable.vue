@@ -4,27 +4,27 @@
             <div class="row">
                 <div class="col-12">
                     <div class="name">
-                        暱稱: {{nickname}}
+                        {{this.$root.$options['languageSet']['NICKNAME']}}: {{nickname}}
                         <div class="pull-right" @click="redirect('editUserForm', {'content': nickname, 'title': 'nickname'})">
-                            編輯
+                            {{this.$root.$options['languageSet']['EDIT']}}
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
                     <div  class="name">
-                        帳號: {{account}}
+                        {{this.$root.$options['languageSet']['ACCOUNT']}}: {{account}}
                     </div>
                 </div>
                 <div class="col-12">
                     <div  class="name">
-                        手機: {{mobile}}
+                        {{this.$root.$options['languageSet']['MOBILE']}}: {{mobile}}
                     </div>
                 </div>
                 <div class="col-12">
                     <div  class="name">
                         LINE ID: {{LINE}}
                         <div class="pull-right" @click="redirect('editUserForm', {'content': LINE, 'title': 'line_id'})">
-                            編輯
+                            {{this.$root.$options['languageSet']['EDIT']}}
                         </div>
                     </div>
                 </div>
@@ -32,52 +32,52 @@
                     <div  class="name">
                         <div class="float-left" style="width: 70%;">email: {{email}}</div>
                         <div class="pull-right float-right" @click="redirect('editUserForm', {'content': email, 'title': 'email'})">
-                            編輯
+                            {{this.$root.$options['languageSet']['EDIT']}}
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
                     <div  class="name">
-                        性別: {{gender}}
+                        {{this.$root.$options['languageSet']['GENDER']}}: {{gender}}
                         <div class="pull-right" @click="redirect('editUserForm', {'content': gender, 'title': 'gender'})">
-                            編輯
+                            {{this.$root.$options['languageSet']['EDIT']}}
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
                     <div  class="name">
-                        生日: {{birthday}}
+                        {{this.$root.$options['languageSet']['BIRTHDAY']}}: {{birthday}}
                         <div class="pull-right" @click="redirect('editUserForm', {'content': birthday, 'title': 'birthday'})">
-                            編輯
+                            {{this.$root.$options['languageSet']['EDIT']}}
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="name">
-                        真實姓名: {{name}}
+                        {{this.$root.$options['languageSet']['REALNAME']}}: {{name}}
                         <div class="pull-right" @click="redirect('editUserForm', {'content': name, 'title': 'name'})">
-                            編輯
+                            {{this.$root.$options['languageSet']['EDIT']}}
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
                     <div  class="name">
-                        密碼: ********
+                        {{this.$root.$options['languageSet']['PASSWORD']}}: ********
                         <input hidden type="password" v-model="password" disabled>
                         <div class="pull-right" @click="redirect('editUserForm', {'content': password, 'title': 'password'})">
-                            編輯
+                            {{this.$root.$options['languageSet']['EDIT']}}
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
                     <div  class="name">
-                        邀請人: {{invitePerson}} <br/>
+                        {{this.$root.$options['languageSet']['INVITOR']}}: {{invitePerson}} <br/>
                         <span v-if="invitePersonLine">邀請人Line ID: {{invitePersonLine}}</span>
                     </div>
                 </div>
                 <div class="col-12">
                     <div  class="name">
-                        卡別: 
+                        {{this.$root.$options['languageSet']['CARDDIF']}}: 
                         <span class="level_txt" v-if="!benefit">    </span>
                         <span class="level_txt" v-if="benefit == 3">    </span>
                         <span class="level_txt" v-if="benefit == 6">    </span>

@@ -40,7 +40,15 @@ const language = {
         BALANCE: '残高',
         TYPE: '種類',
         NOTE: '説明',
-        TIME: '時間'
+        TIME: '時間',
+        NICKNAME: 'ニックネーム',
+        GENDER: '性別',
+        BIRTHDAY: '誕生日',
+        REALNAME: '本名',
+        PASSWORD: 'パスワード',
+        INVITOR: '招待人',
+        CARDDIF: '卡類',
+        EDIT: '編集'
     },
     TW: {
         LOGIN_TXT: '登入',
@@ -83,7 +91,15 @@ const language = {
         BALANCE: '餘額',
         TYPE: '類別',
         NOTE: '說明',
-        TIME: '時間'
+        TIME: '時間',
+        NICKNAME: '暱稱',
+        GENDER: '性別',
+        BIRTHDAY: '生日',
+        REALNAME: '真實姓名',
+        PASSWORD: '密碼',
+        INVITOR: '邀請人',
+        CARDDIF: '卡別',
+        EDIT: '編輯'
     }
 }
 
