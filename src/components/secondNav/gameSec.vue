@@ -5,11 +5,11 @@
                 <div class="gameNav">
                     <div 
                     :class="{active: Active == '2'}"
-                    @click="()=>{clickNav('2')}">遊戲</div>
+                    @click="()=>{clickNav('2')}">{{txT['GAME']}}</div>
                     <div
                     :class="{active: Active == '3'}"
                     @click="()=>{clickNav('3')}"
-                    >紀錄</div>
+                    >{{txT['RECORD']}}</div>
                 </div>
             </div>
         </div>
@@ -45,6 +45,9 @@
         computed: {
             Active() {
                 return this.$store.state.subNav.gameSec
+            },
+            txT(){
+                return this.$root.$options['languageSet']
             }
         },
         mounted() {

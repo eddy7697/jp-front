@@ -66,31 +66,31 @@
                 interval: 'thisMonth',
                 fields: {
                     type: {
-                        label: '幣別',
+                        label: this.$root.$options['languageSet']['COINVAR'],
                         sortable: true
                     },
                     operate: {
-                        label: '進出',
+                        label: this.$root.$options['languageSet']['INOUT'],
                         sortable: true
                     },
                     point: {
-                        label: '分數',
+                        label: this.$root.$options['languageSet']['POINT'],
                         sortable: true
                     },
                     balance: {
-                        label: '餘額',
+                        label: this.$root.$options['languageSet']['BALANCE'],
                         sortable: true
                     },
                     content: {
-                        label: '類型',
+                        label: this.$root.$options['languageSet']['TYPE'],
                         sortable: true
                     },
                     project: {
-                        label: '說明',
+                        label: this.$root.$options['languageSet']['NOTE'],
                         sortable: true
                     },
                     created_at: {
-                        label: '時間',
+                        label: this.$root.$options['languageSet']['TIME'],
                         sortable: true
                     },
                 },
@@ -136,6 +136,11 @@
                         }
                     }
                 })
+            }
+        },
+        computed: {
+            txT(){
+                return this.$root.$options['languageSet']
             }
         },
         mounted() {

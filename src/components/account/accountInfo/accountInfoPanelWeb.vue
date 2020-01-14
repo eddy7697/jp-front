@@ -25,7 +25,7 @@
                         <img @click="redirect('levelInfo')"  class="info-icon" src="~@/assets/images/accountPanel/icon-info.png" alt="">
                         <img class="level_web_icon" :src="levelIcon(level)" alt="">
                         <span class="member-txt">{{returnLevelTxt(level)}}</span>
-                        <button class="gift-report" @click="report()">禮券報表</button>
+                        <button class="gift-report" @click="report()">{{txT['GIFTREPORT']}}</button>
                     </div>
                     <img class="avatar_icon" src="~@/assets/images/avatar/user_0.png" alt="">
                     <!-- <img @click="showAvatarSel()" class="avatar_icon" src="~@/assets/images/avatar/user_0.png" alt=""> -->
@@ -54,6 +54,9 @@
             uid: ''
         },
         computed: {
+            txT(){
+                return this.$root.$options['languageSet']
+            }
         },
         methods: {
             openNewWin(url) {

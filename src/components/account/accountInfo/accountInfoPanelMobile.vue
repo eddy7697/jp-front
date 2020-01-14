@@ -21,7 +21,7 @@
                     <div>
                         <img class="level_web_icon" :src="levelIcon" alt="">
                         <span class="member-txt">{{returnLevelTxt(level)}}</span>
-                        <button class="gift-report" @click="report()">禮券報表</button>
+                        <button class="gift-report" @click="report()">{{txT['GIFTREPORT']}}</button>
                     </div>
                 </div>
                 <div class="card-class-info">
@@ -63,6 +63,9 @@
         computed: {
             levelIcon () {
                 return require(`@/assets/images/level-icon/level_${this.level}.png`)
+            },
+            txT(){
+                return this.$root.$options['languageSet']
             }
         },
         methods: {
@@ -234,7 +237,6 @@
         },
         mounted() {
             this.getBuff()
-
             this.api()
         }
     }

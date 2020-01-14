@@ -4,7 +4,7 @@
             <li>
                 <div @click="redirect('newest')">
                     <img src="~@/assets/images/sideNav/icon_news.png" alt="">
-                    最新消息
+                    {{txT['NEWS']}}
                 </div>
             </li>
 
@@ -98,6 +98,9 @@
             }
         },
         computed: {
+            txT(){
+                return this.$root.$options['languageSet']
+            }
         },
         mounted() {
         }

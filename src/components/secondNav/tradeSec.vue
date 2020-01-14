@@ -11,7 +11,7 @@
                     <div
                     :class="{active: isActive == '3'}"
                     @click="()=>{clickNav('3')}"
-                    >紀錄</div>
+                    >{{txT['RECORD']}}</div>
                 </div>
             </div>
         </div>
@@ -34,6 +34,11 @@
                 this.isActive = nu
                 this.$store.dispatch('toggleNav', false)
                 this.$store.dispatch('tradeSubNav', nu)
+            }
+        },
+        computed: {
+            txT(){
+                return this.$root.$options['languageSet']
             }
         },
         mounted() {

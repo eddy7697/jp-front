@@ -5,7 +5,7 @@
                 <div class="receiveNav">
                     <div 
                     :class="{active: isActive == '2'}"
-                    @click="()=>{clickNav('2')}">最新消息</div>
+                    @click="()=>{clickNav('2')}">{{txT['NEWS']}}</div>
                 </div>
             </div>
         </div>
@@ -25,6 +25,11 @@
         methods: {
             clickNav(nu) {
                 this.isActive = nu;
+            }
+        },
+        computed: {
+            txT(){
+                return this.$root.$options['languageSet']
             }
         },
         mounted() {

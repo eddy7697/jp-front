@@ -8,7 +8,7 @@
                     @click="()=>{clickNav('2')}">儲值</div>
                     <div 
                     :class="{active: isActive == '3'}"
-                    @click="()=>{clickNav('3')}">紀錄</div>
+                    @click="()=>{clickNav('3')}">{{txT['RECORD']}}</div>
                 </div>
             </div>
         </div>
@@ -40,6 +40,11 @@
                     return 
                 } 
                 this.$store.dispatch('depositTable', false)
+            }
+        },
+        computed: {
+            txT(){
+                return this.$root.$options['languageSet']
             }
         },
         mounted() {

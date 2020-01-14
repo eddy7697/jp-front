@@ -34,7 +34,7 @@ export default new Router({
     {
       path: '/mainPage',
       name: 'mainPage',
-      component: loadView('mainPage')
+      component: loadView('System')
     },
     {
       path: '/Login',

@@ -6,14 +6,14 @@
             <div class="row">  
                 <div class="accountNav">
                     <div :class="{active: detect == '1'}"
-                    @click="()=>{clickNav('1', 'personal')}">個人</div>
+                    @click="()=>{clickNav('1', 'personal')}">{{txT['SELFPERSONAL']}}</div>
                     <div 
                     :class="{active: detect == '2'}"
-                    @click="()=>{clickNav('2', 'accountPage')}">帳戶</div>
+                    @click="()=>{clickNav('2', 'accountPage')}">{{txT['ACCOUNTTIT']}}</div>
                     <div
                     :class="{active: detect == '3'}"
                     @click="()=>{clickNav('3', 'friends')}"
-                    >好友</div>
+                    >{{txT['FRIENDS']}}</div>
                 </div>
             </div>
         </div>
@@ -52,6 +52,9 @@
             },
             buff() {
                 console.log(this.$store.state.buff['data'])
+            },
+            txT(){
+                return this.$root.$options['languageSet']
             }
         },
         mounted() {

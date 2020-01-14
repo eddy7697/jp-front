@@ -4,19 +4,19 @@
             <div class="row">
                 <div class="coins-navigation">
                     <div :class="{'active': activeNav == 'all'}" @click="()=>{toggle('all')}">
-                        全部
+                        {{txT['ALL']}}
                     </div>
                     <div :class="{'active': activeNav == 'gold'}"  @click="()=>{toggle('gold')}">
-                        金幣
+                        {{txT['GOLD']}}
                     </div>
                     <div :class="{'active': activeNav == 'ucoin'}"  @click="()=>{toggle('ucoin')}">
-                        回饋幣
+                        {{txT['REWARDS']}}
                     </div>
                     <div :class="{'active': activeNav == 'bonus'}"  @click="()=>{toggle('bonus')}">
-                        紅利
+                        {{txT['BONUS']}}
                     </div>
                     <div :class="{'active': activeNav == 'gift'}"  @click="()=>{toggle('gift')}">
-                        禮券
+                        {{txT['GIFTCARD']}}
                     </div>
                 </div>
             </div>
@@ -38,6 +38,11 @@
             },
             toGetTableInfo() {
                 
+            }
+        },
+        computed: {
+            txT(){
+                return this.$root.$options['languageSet']
             }
         }
     }

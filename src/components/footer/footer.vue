@@ -3,15 +3,15 @@
 
         <div @click="redirect('mainPage')">
             <img :src="mainPage" alt="">
-            首頁
+            {{txT['HOMEPAGE']}}
         </div>
-        <div>
+        <!-- <div>
             <img :src="contractShop" alt="" @click="redirect('contractShop')">
             特約商店
-        </div>
+        </div> -->
         <div @click="redirect('/System')">
             <img :src="game" alt="">
-            遊戲
+            {{txT['GAME']}}
         </div>
         <!-- <div>
             <img :src="trade" alt="" @click="redirect('Trade')">
@@ -19,11 +19,11 @@
         </div> -->
         <div @click="redirect('Mall')">
             <img :src="tools" alt="">
-            道具
+            {{txT['TOOL']}}
         </div>
         <div @click="redirect('Group')">
             <img :src="group" alt="">
-            帳戶
+            {{txT['ACCOUNT']}}
         </div>
     </div>
 </template>
@@ -41,6 +41,9 @@
             }
         },
         computed: {
+            txT(){
+                return this.$root.$options['languageSet']
+            },
             contractShop() {
                 let pic = 'icon_shop.png'
                 if (this.$route.name == 'contractShop')

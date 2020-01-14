@@ -1,7 +1,7 @@
 <template>
     <div class="Newest">
         <div class="newTitle">
-            <h4>最新消息</h4>
+            <h4>{{txT['NEWS']}}</h4>
         </div>
         <div v-for="(item, index) in newsList" :key="index">
             <p>{{item.title}}</p>
@@ -27,6 +27,11 @@
         methods: {
             goToMore() {
                 this.$router.push('Newest')
+            }
+        },
+        computed: {
+            txT(){
+                return this.$root.$options['languageSet']
             }
         },
         mounted() {

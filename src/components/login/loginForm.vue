@@ -5,7 +5,7 @@
         <div class="login-form">
 
             <div class="form-group">
-              <label for="language">{{langOb.LANGUAGE}}</label>
+              <label for="language">{{txT.LANGUAGE}}</label>
               <select @change="changeLan()" v-model="lang" class="form-control" id="language">
                 <option value="">select language</option>
                 <option value="ch-tw">中文</option>
@@ -14,19 +14,19 @@
             </div>  
 
             <div class="form-group text-left">
-                <label for="username">{{langOb.ACCOUNT}}</label>
+                <label for="username">{{txT.ACCOUNT}}</label>
                 <input v-model="account" type="text" placeholder="預設為手機號碼" name="username" id="username" required>
             </div>
 
             <div class="form-group password-area text-left">
-                <label for="password text-left">{{langOb.PASSWORD}}</label>
+                <label for="password text-left">{{txT.PASSWORD}}</label>
                 <input v-model="password" type="password" placeholder="" name="password" id="password" required>
             </div>  
             
             <div class="form-group remember-area">
                 <div>
                   <input @click="clickRemeberMe()" type="checkbox" id="remember" name="remember" value="1">
-                  <span class="remember-word">{{langOb.REMEMBER_ME}}</span>
+                  <span class="remember-word">{{txT.REMEMBER_ME}}</span>
                 </div>
                 <!-- <div>
                   <input @click="clickAdult()" type="checkbox" id="adult" name="adult" value="1">
@@ -49,14 +49,14 @@
             <div class="form-group">
               <div class="row">
                 <div class="container text-center">
-                  <button @click="freeToGo()" id="freeToGo" class="col-5 hidden" type="submit">{{langOb.FREE_LOGIN}}</button>
-                  <button @click="login()" id="login-button" class="col-5" type="submit">{{langOb.LOGIN_TXT}}</button>
+                  <button @click="freeToGo()" id="freeToGo" class="col-5 hidden" type="submit">{{txT.FREE_LOGIN}}</button>
+                  <button @click="login()" id="login-button" class="col-5" type="submit">{{txT.LOGIN_TXT}}</button>
                 </div>
               </div>
             </div>
 
             <div class="form-group">
-                    <h4 id="forget-password" @click="forgetPassword()" class="text-center">{{langOb.FORGETPW}}</h4>
+                    <h4 id="forget-password" @click="forgetPassword()" class="text-center">{{txT.FORGETPW}}</h4>
             </div>
 
             <div class="copyright text-center">
@@ -211,11 +211,7 @@ export default {
   },
   computed: {
     txT(){
-      if(localStorage.getItem('ULG_LANG') == 'JP') {
-        this.langOb = this.$root.$options['language']['JP']
-        return
-      }
-      this.langOb = this.$root.$options['language']['TW']
+        return this.$root.$options['languageSet']
     }
   },
   mounted() {

@@ -7,10 +7,10 @@
                     <div class="container p-0">
                         <div class="row justify-content-center text-center">
                             <div class="col-12">
-                                <h4 class="text-center">已經連續簽到<b>{{day}}</b>天</h4>
+                                <h4 class="text-center">{{txT['ALREADYSIGNIN']}}<b>{{day}}</b>{{txT['DAY']}}</h4>
                             </div>
                             <div v-for="(item, index) in count" class="col-3 p-0 text-center" @click="showFall()">
-                                <h6>第{{index == 0 ? 1 : index+1}}天</h6>
+                                <h6>第{{index == 0 ? 1 : index+1}}{{txT['DAY']}}</h6>
                                 <img v-if="index < count-1 && !checked" class="img-responsive" src="~@/assets/images/lottery/sign-normal-done.png" alt="">
                                 <img v-if="index+1 == count && index+1 < 7 && !checked" class="img-responsive" src="~@/assets/images/lottery/sign-normal-now.gif" alt="">
                                 <img v-if="index < count-1 && checked" class="img-responsive" src="~@/assets/images/lottery/sign-normal-done.png" alt="">
@@ -21,7 +21,7 @@
                                 <p class="text-danger text-center" v-if="index+1 == 7">+16800</p>
                             </div>
                             <div v-for="(item, index) in 7" class="col-3 p-0 text-center" v-if="item > count">
-                                <h6>第{{index == 0 ? 1 : index+1}}天</h6>
+                                <h6>第{{index == 0 ? 1 : index+1}}{{txT['DAY']}}</h6>
                                 <!-- <img v-if="index < uncount-1 && !checked" class="img-responsive" src="~@/assets/images/lottery/sign-normal-done.png" alt=""> -->
                                 <!-- <img v-if="index+1 == uncount && index+1 < 7 && !checked" class="img-responsive" src="~@/assets/images/lottery/sign-normal-now.png" alt=""> -->
                                 <!-- <img v-if="index < " class="img-responsive" src="~@/assets/images/lottery/sign-normal-done.png" alt=""> -->
@@ -33,7 +33,7 @@
                             </div>
                             
                             <div class="col-12 text-center">
-                                <h4>記得連續簽到獲得更多紅利</h4>
+                                <h4>{{txT['REMEMBERSIGN']}}</h4>
                             </div>
                         </div>
                     </div>
@@ -96,6 +96,9 @@ export default {
         }
     },
     computed:{
+        txT(){
+            return this.$root.$options['languageSet']
+        }
     },
     mounted() {
         this.countDays()

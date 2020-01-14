@@ -39,11 +39,20 @@ const getP = (queryString) => {
     }
     return query;
 }
+
+var languageSet
+if(localStorage.getItem('ULG_LANG') == 'JP') {       
+    languageSet = language.JP
+} else {
+    languageSet = language.TW
+}
+
+console.log(languageSet)
 new Vue({
   router,
   store,
   api,
-  language,
+  languageSet,
   render: h => h(App)
 }).$mount('#app')
 document.getElementById('maintain').style.display = 'none'

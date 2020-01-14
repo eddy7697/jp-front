@@ -54,12 +54,12 @@
                 </div>
                 <div id="sideNav">
                     <div id="firstSideNav" class="row">
-                        <span :class="{'active': this.$store.state.navibar.activeMain}" @click="redirect('mainPage')">首頁</span>
-                        <span :class="{'active': this.$store.state.navibar.activeShopping}" @click="redirect('contractShop')">特約商店</span>
-                        <span :class="{'active': this.$store.state.navibar.activeTrade}" @click="redirect('System')">遊戲</span>
+                        <span :class="{'active': this.$store.state.navibar.activeMain}" @click="redirect('mainPage')">{{txT['HOMEPAGE']}}</span>
+                        <!-- <span :class="{'active': this.$store.state.navibar.activeShopping}" @click="redirect('contractShop')">特約商店</span> -->
+                        <span :class="{'active': this.$store.state.navibar.activeTrade}" @click="redirect('System')">{{txT['GAME']}}</span>
                         <!-- <span :class="{'active': this.$store.state.navibar.activeGame}" @click="redirect('Trade')">回饋幣</span> -->
-                        <span :class="{'active': this.$store.state.navibar.activeGroup}" @click="redirect('Mall')">道具</span>
-                        <span :class="{'active': this.$store.state.navibar.activeAccount}" @click="redirect('Account')">帳戶</span>
+                        <span :class="{'active': this.$store.state.navibar.activeGroup}" @click="redirect('Mall')">{{txT['TOOL']}}</span>
+                        <span :class="{'active': this.$store.state.navibar.activeAccount}" @click="redirect('Account')">{{txT['ACCOUNT']}}</span>
                     </div>
                     <div id="secondSideNav" class="row">
                         <span id="gold_coin">
@@ -104,6 +104,9 @@
         }
       },
       computed: {
+          txT(){
+            return this.$root.$options['languageSet']
+          },
           name() {
                 return this.$store.state.memberInfo.userInfo.nickname ? this.$store.state.memberInfo.userInfo.nickname : this.$store.state.memberInfo.userInfo.name
             },

@@ -3,15 +3,15 @@
         <div class="row">
       <div class="container">
         <div class="login-form">   
-            <h3 class="text-center">忘記密碼</h3>   
+            <h3 class="text-center">{{txT['FORGETPWTIT']}}</h3>   
             <p class="text-center">確認送出後，您將收到新密碼簡訊，請用新密碼登入並盡快重設密碼</p>  
             <div class="form-group text-left">
-                <label for="username">帳號</label>
+                <label for="username">{{txT['ACCOUNT']}}</label>
                 <input v-model="account" type="text" placeholder="" name="account" id="account" required>
             </div>
 
             <div class="form-group mobile-area text-left">
-              <label style="padding:0px;" class="col-2" for="mobile text-left">手機號碼</label>
+              <label style="padding:0px;" class="col-2" for="mobile text-left">{{txT['MOBILE']}}</label>
               <select v-model="country_codes" name="country_codes" id="country_codes" class="col-2">
                 <option value="+886">台灣(+886)</option>
                 <option value="+86">中國區(+86)</option>
@@ -22,7 +22,7 @@
             </div>  
 
             <div class="form-group">
-              <button @click="forgetPw()" id="login-button" type="submit">送出</button>
+              <button @click="forgetPw()" id="login-button" type="submit">{{txT['SUBMIT']}}</button>
             </div>
 
             <div class="form-group">
@@ -71,6 +71,11 @@
           prev() {
               this.$store.dispatch('forgetPw', false)
           }
+        },
+        computed: {
+          txT(){
+                return this.$root.$options['languageSet']
+            }
         }
     }
 </script>

@@ -62,7 +62,7 @@
         <div class="container sure-area">
             <div class="row">
                 <div class="col-6 text-center">
-                    <button class="btn-lg btn-primary" @click="redirect('/')">回首頁</button>
+                    <button class="btn-lg btn-primary" @click="redirect('/')">{{txT['HOMEPAGE']}}</button>
                 </div>
                 <div class="col-6 text-center">
                     <button class="btn-lg btn-primary" :disabled="!msgTxt"  @click="sendRegiData()">確定</button>
