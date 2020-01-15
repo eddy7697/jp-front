@@ -1,13 +1,13 @@
 {
-  "name": "fbk_platform",
-  "version": "0.1.0",
+  "name": "jp_platform",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
     "start": "vue-cli-service serve --mode local",
     "build": "vue-cli-service build && scp -r /Users/skandalin/desktop/platform/dist/* skanda@www-stg.fbk168.com:/home/skanda/web-data",
     "build-prod": "vue-cli-service build --mode production && scp -r /Users/skandalin/desktop/platform/dist/* skanda@www.fbk168.com:/home/skanda/web-data",
     "build-dev": "vue-cli-service build --mode development && scp -r /Users/skandalin/desktop/platform/dist/* skanda@www-stg.fbk168.com:/home/skanda/www-data",
-    "docker-dev": "vue-cli-service build --mode development",
+    "docker-stg": "vue-cli-service build --mode development",
     "docker-prod": "vue-cli-service build --mode production"
   },
   "dependencies": {

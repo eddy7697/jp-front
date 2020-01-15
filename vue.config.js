@@ -2,7 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
-    baseUrl: process.env.NODE_ENV = '',
+    publicPath: process.env.NODE_ENV = '',
     css: {
         sourceMap: true
     },
