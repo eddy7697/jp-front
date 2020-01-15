@@ -48,7 +48,20 @@ const language = {
         PASSWORD: 'パスワード',
         INVITOR: '招待人',
         CARDDIF: '卡類',
-        EDIT: '編集'
+        EDIT: '編集',
+        INTERVALSERACH: '区間検索',
+        THISMONTH: '今月',
+        TODAY: '今日',
+        LASTWEEK: '先週',
+        YESTERDAY: '昨日',
+        THISWEEK: '今週',
+        LASTMONTH: '先月',
+        MYTOOLS: '私の道具',
+        MYFRIENDS: '私の友達',
+        MYGROUPS: 'コミュニティ',
+        CLOUDFRIENDS: 'クラワド友達',
+        INVITING: '招待中',
+        GAMEINTRO: 'ゲーム紹介'
     },
     TW: {
         LOGIN_TXT: '登入',
@@ -99,7 +112,20 @@ const language = {
         PASSWORD: '密碼',
         INVITOR: '邀請人',
         CARDDIF: '卡別',
-        EDIT: '編輯'
+        EDIT: '編輯',
+        INTERVALSERACH: '區間搜尋',
+        THISMONTH: '本月',
+        TODAY: '本日',
+        LASTWEEK: '上週',
+        YESTERDAY: '昨日',
+        THISWEEK: '本週',
+        LASTMONTH: '上月',
+        MYTOOLS: '道具',
+        MYFRIENDS: '我的好友',
+        MYGROUPS: '我的社群',
+        CLOUDFRIENDS: '雲端好友',
+        INVITING: '邀請中',
+        GAMEINTRO: '遊戲介紹'
     }
 }
 

@@ -25,7 +25,7 @@
                     <img @click="startGame(item.redirect_url)" v-if="item.images.down && item.status == 2" :src="item.images.down[0]['mobile']" alt="">
                     <img @click="startGame(item.redirect_url)" v-if="item.images.maintain && item.status == 3" :src="item.images.maintain[0]['mobile']" alt="">
                     <img @click="startGame(item.redirect_url)" v-if="item.images.comingsoon && item.status == 4" :src="item.images.comingsoon[0]['mobile']" alt="">
-                    <div class="gray-link">遊戲介紹</div>
+                    <div class="gray-link">{{txT['GAMEINTRO']}}</div>
                     <!-- <a :href="item.fb" :class="{'blue-link': item.fb, 'gray-link': !item.fb}">遊戲介紹</a> -->
                     </div>
                 </div>
@@ -92,6 +92,9 @@
             }
         },
         computed: {
+            txT() {
+                return this.$root.$options['languageSet']
+            },
             toggleClass(boolean) {
                 if(boolean == 1) return 'blue-link'
                 else

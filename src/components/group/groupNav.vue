@@ -4,16 +4,16 @@
             <div class="row">
                 <div class="coins-navigation">
                     <div :class="{'active': activeNav == 'friends'}" @click="()=>{toggle('friends')}">
-                        我的好友
+                        {{this.$root.$options['languageSet']['MYFRIENDS']}}
                     </div>
                     <div :class="{'active': activeNav == 'inviFd'}"  @click="()=>{toggle('inviFd')}">
-                        邀請中
+                        {{this.$root.$options['languageSet']['INVITING']}}
                     </div>
                     <div :class="{'active': activeNav == 'MP'}"  @click="()=>{toggle('MP')}">
-                        雲端好友
+                        {{this.$root.$options['languageSet']['CLOUDFRIENDS']}}
                     </div>
                     <div :class="{'active': activeNav == 'group'}"  @click="()=>{toggle('group')}">
-                        我的社群
+                        {{this.$root.$options['languageSet']['MYGROUPS']}}
                     </div>
                 </div>
             </div>

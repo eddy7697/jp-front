@@ -4,7 +4,9 @@
             <div class="row">  
                 <div class="mallNav">
                     <div :class="{active: nav == '1'}"
-                    @click="()=>{clickNav('1')}">我的道具</div>
+                    @click="()=>{clickNav('1')}">
+                    {{this.$root.$options['languageSet']['MYTOOLS']}}
+                    </div>
                     <div 
                     :class="{active: nav == '2'}"
                     @click="()=>{clickNav('2')}">商城</div>

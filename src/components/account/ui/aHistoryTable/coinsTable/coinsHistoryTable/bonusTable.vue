@@ -1,14 +1,14 @@
 <template>
     <div class="bonusTable">
         <div class="bg-white container">
-            <label for="intervalFilter">區間搜尋:</label>
+            <label for="intervalFilter">{{this.$root.$options['languageSet']['INTERVALSERACH']}}:</label>
             <select v-model="interval" @change="toLoadTableData('reset')" class="form-control col-5" name="" id="intervalFilter">
-                <option value="today">本日</option>
-                <option value="yesterday">昨日</option>
-                <option value="current_week">本週</option>
-                <option value="previous_week">上週</option>
-                <option value="thisMonth">本月</option>
-                <option value="lastMonth">上月</option>
+                <option value="today">{{this.$root.$options['languageSet']['TODAY']}}</option>
+                <option value="yesterday">{{this.$root.$options['languageSet']['YESTERDAY']}}</option>
+                <option value="current_week">{{this.$root.$options['languageSet']['THISWEEK']}}</option>
+                <option value="previous_week">{{this.$root.$options['languageSet']['LASTWEEK']}}</option>
+                <option value="thisMonth">{{this.$root.$options['languageSet']['THISMONTH']}}</option>
+                <option value="lastMonth">{{this.$root.$options['languageSet']['LASTMONTH']}}</option>
             </select>
         </div>
         <div class="container">
