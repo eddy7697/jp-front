@@ -15,3 +15,8 @@ docker build -t platform -f docker/dock_prod/Dockerfile .
 docker run -d -it -p 8080:80 --rm --name platform-prod platform
 
 ```
+
+## maintain page
+```
+maintain\index.html
+```
