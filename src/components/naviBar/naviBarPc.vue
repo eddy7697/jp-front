@@ -140,7 +140,7 @@
                     // this.$store.dispatch('redirectConfirm', set)
                     localStorage.clear();
 
-                    redirect.redirect('/', '成功', txT['SUCCESSLOGOUT'], 'success')
+                    redirect.redirect('/', '成功', this.$root.$options['languageSet']['SUCCESSLOGOUT'], 'success')
                 }
             })
         },
