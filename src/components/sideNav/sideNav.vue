@@ -18,7 +18,7 @@
             <li>
                 <div @click="customServce()">
                     <img src="~@/assets/images/sideNav/icon_service.png" alt="">
-                    官方LINE/客服
+                    {{this.$root.$options['languageSet']['CUSTOMSERVICE']}}
                 </div>
             </li>
             <!-- <li>
@@ -52,7 +52,7 @@
             <li>
                 <div @click="logout()">
                     <img src="~@/assets/images/sideNav/icon_logout.png" alt="">
-                    登出
+                    {{this.$root.$options['languageSet']['LOGOUT']}}
                 </div>
             </li>
             <li>
@@ -92,7 +92,7 @@
                         this.$store.dispatch('openAlert', result)
                     } else {
                         localStorage.clear();
-                        redirect.redirect('/', '成功', '您已成功登出', 'success')
+                        redirect.redirect('/', '成功', txT['SUCCESSLOGOUT'], 'success')
                     }
                 })
             }

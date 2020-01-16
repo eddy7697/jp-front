@@ -22,8 +22,8 @@
             </div>
             <div class="row btn-area-footer">
                 <div class="container">
-                    <div class="btn btn-sm col-6" @click="toLoadData('minus')">上一頁</div>
-                    <div class="btn btn-sm col-6" @click="toLoadData('plus')" v-if="lastPage">下一頁</div>
+                    <div class="btn btn-sm col-6" @click="toLoadData('minus')">{{this.$root.$options['languageSet']['PREVIOUSPAGE']}}</div>
+                    <div class="btn btn-sm col-6" @click="toLoadData('plus')" v-if="lastPage">{{this.$root.$options['languageSet']['NEXTPAGE']}}</div>
                 </div>
             </div>
         </div>   

@@ -81,38 +81,38 @@
             <div class="row text-center">
                  <div class="col-6 text-center">
                     <button v-if="nearest && is_favorite == 0 && !storeNumber" class="btn-lg btn-success" @click="findNearest('minus')">
-                        上一頁
+                        {{this.$root.$options['languageSet']['PREVIOUSPAGE']}}
                     </button> 
                     <button v-if="!nearest && is_favorite == 0 && !storeNumber" class="btn-lg btn-success" @click="loadShopList('minus')">
-                        上一頁
+                        {{this.$root.$options['languageSet']['PREVIOUSPAGE']}}
                     </button>
                     <button v-if="is_favorite && !storeNumber" class="btn-lg btn-success" @click="loadFavoriteList('minus')">
-                        上一頁
+                        {{this.$root.$options['languageSet']['PREVIOUSPAGE']}}
                     </button>
                     <button v-if="
                             !is_favorite &&
                             !nearest &&
                             storeNumber
                             " class="btn-lg btn-success" @click="filter('minus')">
-                        上一頁
+                        {{this.$root.$options['languageSet']['PREVIOUSPAGE']}}
                     </button>
                 </div>
                 <div class="col-6 text-center">
                     <button v-if="nearest && is_favorite == 0 && !storeNumber" class="btn-lg btn-success" @click="findNearest('plus')">
-                        下一頁
+                        {{this.$root.$options['languageSet']['NEXTPAGE']}}
                     </button>
                     <button v-if="!nearest && is_favorite == 0 && !storeNumber" class="btn-lg btn-success" @click="loadShopList('plus')">
-                        下一頁
+                        {{this.$root.$options['languageSet']['NEXTPAGE']}}
                     </button>
                     <button v-if="is_favorite && !storeNumber" class="btn-lg btn-success" @click="loadFavoriteList('plus')">
-                        下一頁
+                        {{this.$root.$options['languageSet']['NEXTPAGE']}}
                     </button>
                     <button v-if="
                                 is_favorite == 0 &&
                                 !nearest &&
                                 storeNumber
                                 " class="btn-lg btn-success" @click="filter('plus')">
-                        下一頁
+                        {{this.$root.$options['languageSet']['NEXTPAGE']}}
                     </button>
                 </div>
             </div>

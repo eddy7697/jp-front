@@ -35,12 +35,12 @@
             <div class="row text-center">
                  <div class="col-6 text-center">
                     <button class="btn-lg btn-success" @click="loadShopList('minus')">
-                        上一頁
+                        {{this.$root.$options['languageSet']['PREVIOUSPAGE']}}
                     </button>
                 </div>
                 <div class="col-6 text-center">
                     <button  v-if="lastPage" class="btn-lg btn-success" @click="loadShopList('plus')">
-                        下一頁
+                        {{this.$root.$options['languageSet']['NEXTPAGE']}}
                     </button>
                 </div>
             </div>

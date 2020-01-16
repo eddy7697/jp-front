@@ -2,8 +2,8 @@
     <div class="pcFooter">
         <div class="container">
             <div class="row text-center">
-                <div class="col">FBK官網</div>
-                <!-- <a class="col" target="_blank" href="https://web.fbk168.com/"><div>ULG官網</div></a> -->
+                <div class="col">FBK{{this.$root.$options['languageSet']['OFFICIALWEB']}}</div>
+                <!-- <a class="col" target="_blank" href="https://web.fbk168.com/"><div>ULG{{this.$root.$options['languageSet']['OFFICIALWEB']}}</div></a> -->
                 <!-- <a class="col" target="_blank" href="https://web.fbk168.com/rule.html"><div>使用者條款</div></a> -->
                 <!-- <div class="col" @click="toShowRule()">使用者條款</div> -->
             </div>

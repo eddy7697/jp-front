@@ -8,8 +8,8 @@
             </div>
             <div class="row btn-area-footer">
                 <div class="container">
-                    <div class="btn btn-sm col-6" @click="toLoadData('minus')">上一頁</div>
-                    <div class="btn btn-sm col-6" @click="toLoadData('plus')" v-if="lastPage">下一頁</div>
+                    <div class="btn btn-sm col-6" @click="toLoadData('minus')">{{this.$root.$options['languageSet']['PREVIOUSPAGE']}}</div>
+                    <div class="btn btn-sm col-6" @click="toLoadData('plus')" v-if="lastPage">{{this.$root.$options['languageSet']['NEXTPAGE']}}</div>
                 </div>
             </div>
         </div>
@@ -51,32 +51,37 @@
                 this.$store.dispatch('gameSec', 3)
             }
         },
+        computed: {
+            txT(){
+                return this.$root.$options['languageSet']
+            }
+        },
         data() {
             return {
                 gameHistory: null,
                 fields: {
                     id: {
-                        label: '流水號',
+                        label: this.$root.$options['languageSet']['SERIALNUM'],
                         sortable: true
                     },
                     game_name: {
-                        label: '遊戲名稱',
+                        label: this.$root.$options['languageSet']['GAMENAME'],
                         sortable: true
                     },
                     betting: {
-                        label: '總下注金額',
+                        label: this.$root.$options['languageSet']['TOTALBET'],
                         sortable: true
                     },
                     win: {
-                        label: '總返回金額',
+                        label: this.$root.$options['languageSet']['TOTALRETURN'],
                         sortable: true
                     },
                     inbound_at: {
-                        label: '開始遊戲時間',
+                        label: this.$root.$options['languageSet']['STARTGAMETIME'],
                         sortable: true
                     },
                     outbound_at: {
-                        label: '結束時間',
+                        label: this.$root.$options['languageSet']['ENDGAMETIME'],
                         sortable: true
                     }
                 },

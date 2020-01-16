@@ -1,6 +1,12 @@
 import axios from 'axios'
 const swal = require('sweetalert2')
 import router from './../../router'
+import { language } from '../../assets/js/language'
+if(localStorage.getItem('ULG_LANG') == 'JP') {       
+  var languageSet = language.JP
+} else {
+  var languageSet = language.TW
+}
 const state = {
   'client_id': '922301cb2254401cc84399578ec473de',
   'client_secret': 'a7428d49d6d40dee87f43c4588154f0c'
@@ -28,7 +34,7 @@ const getters = {
 const errorAuth = () => {
   swal.fire({
       title: 'Error!',
-      text: '您已被登出',
+      text: languageSet['SUCCESSLOGOUT'],
       type: 'error',
       confirmButtonText: '確定'
   }).then(function(){
@@ -217,9 +223,6 @@ const actions = {
 }
 
 const mutations = {
-  reNewToken(state, payload) {
-    
-  }
 }
 
 export default {

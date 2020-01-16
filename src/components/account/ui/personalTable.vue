@@ -87,10 +87,10 @@
                 </div>
                 <div class="col-12">
                     <div  class="name">
-                        玩家頭銜: 
+                        {{this.$root.$options['languageSet']['PLAYERTITLE']}}: 
                         <img class="avatar" :src="levelIcon" alt="">
                         <div class="pull-right" @click="redirect('levelInfo')">
-                            頭銜說明
+                            {{this.$root.$options['languageSet']['TITLEDESC']}}
                         </div>
                     </div>
                 </div>

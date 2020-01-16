@@ -29,7 +29,7 @@
                     </span>
                     <span class="nav-round-icon" @click="logout()">
                         <img class="img-responsive" src="@/assets/images/pc-navibar-icons/logout_web_icon.png" alt="">
-                        <span>登出</span>
+                        <span>{{this.$root.$options['languageSet']['LOGOUT']}}</span>
                     </span>
                 </div>
             </div> -->
@@ -58,7 +58,7 @@
                         <!-- <span :class="{'active': this.$store.state.navibar.activeShopping}" @click="redirect('contractShop')">特約商店</span> -->
                         <span :class="{'active': this.$store.state.navibar.activeTrade}" @click="redirect('System')">{{txT['GAME']}}</span>
                         <!-- <span :class="{'active': this.$store.state.navibar.activeGame}" @click="redirect('Trade')">回饋幣</span> -->
-                        <span :class="{'active': this.$store.state.navibar.activeGroup}" @click="redirect('Mall')">{{txT['TOOL']}}</span>
+                        <!-- <span :class="{'active': this.$store.state.navibar.activeGroup}" @click="redirect('Mall')">{{txT['TOOL']}}</span> -->
                         <span :class="{'active': this.$store.state.navibar.activeAccount}" @click="redirect('Account')">{{txT['ACCOUNT']}}</span>
                     </div>
                     <div id="secondSideNav" class="row">
@@ -140,7 +140,7 @@
                     // this.$store.dispatch('redirectConfirm', set)
                     localStorage.clear();
 
-                    redirect.redirect('/', '成功', '您已成功登出', 'success')
+                    redirect.redirect('/', '成功', txT['SUCCESSLOGOUT'], 'success')
                 }
             })
         },

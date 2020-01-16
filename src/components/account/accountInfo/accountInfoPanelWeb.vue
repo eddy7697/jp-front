@@ -21,7 +21,7 @@
                         <span>ID: {{uid}}</span>
                     </div>
                     <div class="leftInfo">
-                        <span>階級徽章</span>
+                        <span>{{txT['CLASSBADGE']}}</span>
                         <img @click="redirect('levelInfo')"  class="info-icon" src="~@/assets/images/accountPanel/icon-info.png" alt="">
                         <img class="level_web_icon" :src="levelIcon(level)" alt="">
                         <span class="member-txt">{{returnLevelTxt(level)}}</span>

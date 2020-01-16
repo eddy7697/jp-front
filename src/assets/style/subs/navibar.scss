@@ -222,7 +222,7 @@
             line-height: 40px;
             @include customMax(1200px) 
             {
-                line-height: 25px;
+                line-height: 5vh;
             }
             .active {
                 background: url('~@/assets/images/navibar/web-nav-hover.png') no-repeat;

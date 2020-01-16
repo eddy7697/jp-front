@@ -50,7 +50,7 @@
               <div class="row">
                 <div class="container text-center">
                   <button @click="freeToGo()" id="freeToGo" class="col-5 hidden" type="submit">{{txT.FREE_LOGIN}}</button>
-                  <button @click="login()" id="login-button" class="col-5" type="submit">{{txT.LOGIN_TXT}}</button>
+                  <button @click="login()" id="login-button" class="col-5" type="submit">{{this.$root.$options['languageSet']['LOGIN_TXT']}}</button>
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@
 
             <div class="copyright text-center">
               <div>
-                <!-- &copy; <a class="webSiteFont hidden" href="https://www.ucoin.com.tw/" target="_blank">回饋寶官網</a> ALL RIGHTS RESERVED. -->
+                <!-- &copy; <a class="webSiteFont hidden" href="https://www.ucoin.com.tw/" target="_blank">回饋寶{{this.$root.$options['languageSet']['OFFICIALWEB']}}</a> ALL RIGHTS RESERVED. -->
                 <img src="@/assets/images/15+.jpg" alt="">
               </div>
               <p>Ver.{{returnVer()}}</p>

@@ -12,10 +12,10 @@
                     <label for="phone">手機號碼*</label>
                     <select v-model="country_codes"  class="form-control col-4" name="country_codes" id="country_codes">
                         <option value="">選擇國碼</option>
-                        <option value="+886">台灣(+886)</option>
-                        <option value="+86">中國區(+86)</option>
-                        <option value="+1">美國區(+1)</option>
-                        <option value="+60">馬來西亞區(+60)</option>
+                        <option value="+886">{{this.$root.$options['languageSet']['TAIWAN']}}(+886)</option>
+                        <option value="+86">{{this.$root.$options['languageSet']['CHINA']}}(+86)</option>
+                        <option value="+1">{{this.$root.$options['languageSet']['USA']}}(+1)</option>
+                        <option value="+60">{{this.$root.$options['languageSet']['MALAYSIA']}}(+60)</option>
                     </select>
                     <div class="input-group-append">
                         <input type="Number" v-model="phone" class="form-control col-12" name="phone" maxlength="20" placeholder="請輸入手機號碼">
