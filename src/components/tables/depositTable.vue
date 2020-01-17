@@ -97,7 +97,7 @@
                         console.log(result)
                         this.$store.dispatch('openAlert', result)
                     } else {
-                        redirect.redirect('/#/deposit', '成功', '您已成功', 'success', true)
+                        redirect.redirect('/#/deposit', '成功', this.$root.$options['languageSet']['YOURALREADISUCCESS'], 'success', true)
                     }
                 })
             },

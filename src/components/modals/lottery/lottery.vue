@@ -82,7 +82,7 @@ export default {
                 } else {
                     if(result['result'] == 'success') {
                         setTimeout(()=>{
-                            redirect.redirect('/#/mainPage', '成功', '您已成功', 'success', true)
+                            redirect.redirect('/#/mainPage', '成功', this.$root.$options['languageSet']['YOURALREADISUCCESS'], 'success', true)
                         }, 2500)
                     }
                 }

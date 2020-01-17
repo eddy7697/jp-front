@@ -43,7 +43,7 @@
                     if (result['result'] == 'error') {
                         redirect.redirect('/#/contractShop', '失敗', result.errorMsg.error.message, 'error')
                     } else {
-                        redirect.redirect('/#/contractShop', '成功', '您已成功', 'success', true)
+                        redirect.redirect('/#/contractShop', '成功', this.$root.$options['languageSet']['YOURALREADISUCCESS'], 'success', true)
                     }
                 })
             }

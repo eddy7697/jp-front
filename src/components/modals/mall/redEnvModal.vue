@@ -149,11 +149,11 @@ export default {
                         this.$store.dispatch('openAlert', result)
                     } else {
                         // let set = {};
-                        // set['text'] = '您已成功'
+                        // set['text'] = this.$root.$options['languageSet']['YOURALREADISUCCESS']
                         // set['title'] = '成功'
                         // set['url'] = 'trade'
                         this.closeModal()
-                        redirect.redirect('/#/trade', '成功', '您已成功', 'success', true)
+                        redirect.redirect('/#/trade', '成功', this.$root.$options['languageSet']['YOURALREADISUCCESS'], 'success', true)
 
                         // this.$store.dispatch('redirectConfirm', set).then(result => {
                         //     this.$router.go(set['url'])

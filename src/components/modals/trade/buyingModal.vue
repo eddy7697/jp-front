@@ -97,7 +97,7 @@ export default {
                     // this.$store.dispatch('redirectConfirm', set).then(result => {
                     //     this.$router.go(set['url'])
                     // })
-                    redirect.redirect('/#/trade', '成功', '您已成功', 'success', true)
+                    redirect.redirect('/#/trade', '成功', this.$root.$options['languageSet']['YOURALREADISUCCESS'], 'success', true)
                 }
             })
         }

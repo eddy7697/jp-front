@@ -61,7 +61,7 @@
                         this.$store.dispatch('openAlert', result)
                     } else {
                         this.closeModal()
-                        redirect.redirect('/#/Group', '成功', '您已成功', 'success', true)
+                        redirect.redirect('/#/Group', '成功', this.$root.$options['languageSet']['YOURALREADISUCCESS'], 'success', true)
 
                         // console.log(result)
                         // let set = {};

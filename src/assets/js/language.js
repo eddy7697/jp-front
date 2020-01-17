@@ -81,7 +81,9 @@ const language = {
         TOTALBET: '総ベット金額',
         TOTALRETURN: '総還元金額',
         STARTGAMETIME: 'ゲーム開始時間',
-        ENDGAMETIME: '終わり時間'
+        ENDGAMETIME: '終わり時間',
+        VERIFYNEED: '検証必要',
+        YOURALREADISUCCESS: 'もう成功しました'
     },
     TW: {
         LOGIN_TXT: '登入',
@@ -165,7 +167,9 @@ const language = {
         TOTALBET: '總下注金額',
         TOTALRETURN: '總返回金額',
         STARTGAMETIME: '開始遊戲時間',
-        ENDGAMETIME: '結束時間'
+        ENDGAMETIME: '結束時間',
+        VERIFYNEED: '必須驗證',
+        YOURALREADISUCCESS: '您已成功'
     }
 }
 

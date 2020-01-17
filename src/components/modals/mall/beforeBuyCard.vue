@@ -39,7 +39,7 @@ export default {
                 } else {
                     this.$store.dispatch('beforeBuyCard', {show: false, content: ''})
                     this.$store.dispatch('mallNav', '1')
-                    redirect.redirect('/#/mall', '成功', '您已成功', 'success', true)
+                    redirect.redirect('/#/mall', '成功', this.$root.$options['languageSet']['YOURALREADISUCCESS'], 'success', true)
                 }
             })
         }

@@ -64,11 +64,11 @@
                         this.$store.dispatch('openAlert', result)
                     } else {
                         // let set = {};
-                        // set['text'] = '您已成功'
+                        // set['text'] = this.$root.$options['languageSet']['YOURALREADISUCCESS']
                         // set['title'] = '成功'
                         // set['url'] = 'contractShop'
                         // this.$store.dispatch('redirectConfirm', set)
-                        redirect.redirect('/#/contractShop', '成功', '您已成功', 'success', true)
+                        redirect.redirect('/#/contractShop', '成功', this.$root.$options['languageSet']['YOURALREADISUCCESS'], 'success', true)
                     }
                 })
             }

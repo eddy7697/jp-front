@@ -123,7 +123,7 @@
                         console.log(result)
                         this.$store.dispatch('openAlert', result)
                     } else {
-                        redirect.redirect('/#/contractShop', '成功', '您已成功', 'success', true)
+                        redirect.redirect('/#/contractShop', '成功', this.$root.$options['languageSet']['YOURALREADISUCCESS'], 'success', true)
                     }
                 })
             }

@@ -200,7 +200,7 @@ export default {
         if(!this.agree)
         error.errorMsg.error.message = '您必須同意以閱讀使用者手則'
         if(!this.lock)
-        error.errorMsg.error.message = '必須驗證'
+        error.errorMsg.error.message = this.$root.$options['languageSet']['VERIFYNEED']
         
         this.$store.dispatch('openAlert', error)
       }
