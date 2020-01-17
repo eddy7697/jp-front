@@ -17,10 +17,10 @@
             <img :src="trade" alt="" @click="redirect('Trade')">
             回饋幣
         </div> -->
-        <div @click="redirect('Mall')">
+        <!-- <div @click="redirect('Mall')">
             <img :src="tools" alt="">
             {{txT['TOOL']}}
-        </div>
+        </div> -->
         <div @click="redirect('Group')">
             <img :src="group" alt="">
             {{txT['ACCOUNT']}}
