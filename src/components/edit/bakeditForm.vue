@@ -102,7 +102,7 @@
                     if (result['result'] == 'error') {
                         this.$store.dispatch('openAlert', result)
                     } else {
-                        redirect.redirect('/#/Group', '成功', '您已成功更改', 'success')
+                        redirect.redirect('/#/Group', '成功', this.$root.$options['languageSet']['EDITSUCCESS'], 'success')
                     }
                 })
             },
@@ -144,7 +144,7 @@
                     if (result['result'] == 'error') {
                         this.$store.dispatch('openAlert', result)
                     } else {
-                        redirect.redirect('/#/Group', '成功', '您已成功更改', 'success')
+                        redirect.redirect('/#/Group', '成功', this.$root.$options['languageSet']['EDITSUCCESS'], 'success')
                     }
                 })
             },

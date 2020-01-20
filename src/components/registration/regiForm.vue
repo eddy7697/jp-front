@@ -211,7 +211,7 @@ const swal = require('sweetalert2')
                         localStorage.setItem('identity', `${result['data']['token_type']} ${result['data']['identity_token']}`)
                         // this.$store.dispatch('adsModal', true)
                         // this.$store.dispatch('regiSuccess', true)
-                        redirect.redirect('/#/mainPage', '成功', '您已成功註冊', 'success', true)
+                        redirect.redirect('/#/mainPage', '成功', this.$root.$options['languageSet']['REGISUCCESS'], 'success', true)
 
                         // localStorage.setItem('Authorization', `${result['token_type']} ${result['identity_token']}`)
                         // this.$router.push('registrationRules')

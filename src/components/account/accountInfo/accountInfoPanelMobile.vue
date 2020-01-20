@@ -35,7 +35,7 @@
                     <span class="level_txt" v-if="benefit == 6">    </span>
                     <span class="level_txt" v-if="benefit == 9">    </span>
                     <img class="icon-plus" @click="redirect('/mall')" src="~@/assets/images/accountPanel/icon-plus.png" alt="">
-                    <span class="expire_time" v-if="effective">(到期時間 : {{effective}})</span>
+                    <span class="expire_time" v-if="effective">({{txT['DUEDAY']}} : {{effective}})</span>
                 </div>
             </div>
             <a id="pdfRe" target="_blank" href="" style="display:none;"></a>

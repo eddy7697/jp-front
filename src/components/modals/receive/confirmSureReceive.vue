@@ -49,11 +49,11 @@
                         this.$store.dispatch('openAlert', result)
                     } else {
                         let set = {};
-                        set['text'] = '您已成功領取'
+                        set['text'] = this.$root.$options['languageSet']['ALREADIRECIVED']
                         set['title'] = '完成'
                         set['url'] = '/receivePage'
                         set['reload'] = true
-                        redirect.redirect('/#/receivePage', '完成', '您已成功領取', 'success', true)  
+                        redirect.redirect('/#/receivePage', '完成', this.$root.$options['languageSet']['ALREADIRECIVED'], 'success', true)  
                     }
                 })
             },

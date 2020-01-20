@@ -37,7 +37,7 @@ export default {
         },
         closeModal() {
             if(this.$route.name == 'editUserForm'){
-                redirect.redirect('/#/Group', '成功', '您已成功更改', 'success')
+                redirect.redirect('/#/Group', '成功', this.$root.$options['languageSet']['EDITSUCCESS'] , 'success')
                 this.$store.dispatch('adsModal', false)
             }
             this.$store.dispatch('adsModal', false)

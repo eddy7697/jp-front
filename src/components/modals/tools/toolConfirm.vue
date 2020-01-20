@@ -110,7 +110,7 @@ export default {
                                  redirect.redirect('/#/mall', '成功', '您已成功使用報表功能', 'success')
                                  return
                             } else {
-                                redirect.redirect('/#/mall', '成功', '您已成功更改', 'success', true)
+                                redirect.redirect('/#/mall', '成功', this.$root.$options['languageSet']['EDITSUCCESS'], 'success', true)
                                 this.$store.dispatch('toolConfirmModal', {show: false, content: ''})
                             }
                         })

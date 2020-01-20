@@ -178,7 +178,7 @@
                         this.$store.dispatch('openAlert', result)
                     } else {
                         this.$store.dispatch('adsModal', true)
-                        // redirect.redirect('/#/Group', '成功', '您已成功更改', 'success')
+                        // redirect.redirect('/#/Group', '成功', this.$root.$options['languageSet']['EDITSUCCESS'], 'success')
                     }
                 })
             },
@@ -230,7 +230,7 @@
                         this.$store.dispatch('openAlert', result)
                     } else {
                         this.$store.dispatch('adsModal', true)
-                        // redirect.redirect('/#/Group', '成功', '您已成功更改', 'success')
+                        // redirect.redirect('/#/Group', '成功', this.$root.$options['languageSet']['EDITSUCCESS'], 'success')
                     }
                 })
             },

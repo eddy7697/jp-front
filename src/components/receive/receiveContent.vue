@@ -14,7 +14,8 @@
                             <p v-if="item['expires_at']">{{item['expires_at']}}</p>
                         </div>
                             <div>
-                            <button class="btn btn-danger" @click="receiveEnv(item)">領取</button>
+                            <button class="btn btn-danger" @click="receiveEnv(item)">{{this.$root.$options['languageSet']['RECEIVETXT']}}
+</button>
                         </div>
                     </div>
                 </div>
@@ -30,7 +31,8 @@
                             <p v-if="item['expires_at']">{{item['expires_at']}}</p>
                         </div>
                         <div>
-                            <button class="btn btn-success" @click="receiveEnv(item)">領取</button>
+                            <button class="btn btn-success" @click="receiveEnv(item)">{{this.$root.$options['languageSet']['RECEIVETXT']}}
+</button>
                         </div>
                     </div>
                 </div>
@@ -56,7 +58,8 @@
                             <button class="btn btn-success" @click="receiveEnv(item)">確認</button>
                         </div>
                         <div v-if="item['features'].length !== 0">
-                            <button class="btn btn-success" @click="receiveEnv(item)">領取</button>
+                            <button class="btn btn-success" @click="receiveEnv(item)">{{this.$root.$options['languageSet']['RECEIVETXT']}}
+</button>
                         </div>
                     </div>
                 </div>   
@@ -100,7 +103,7 @@
                         this.getInbox()
                     } else {
                         let set = {};
-                        set['text'] = '您已成功領取'
+                        set['text'] = this.$root.$options['languageSet']['ALREADIRECIVED']
                         set['title'] = '完成'
                         set['url'] = '/receivePage'
                         set['reload'] = true
@@ -114,16 +117,16 @@
                                         return
                                     } else {
                                         console.log('1')
-                                        redirect.redirect('/#/receivePage', '完成', '您已成功領取', 'success', true)
+                                        redirect.redirect('/#/receivePage', '完成', this.$root.$options['languageSet']['ALREADIRECIVED'], 'success', true)
                                     }
                                 } else {
                                     console.log('2')
-                                    redirect.redirect('/#/receivePage', '完成', '您已成功領取', 'success', true)
+                                    redirect.redirect('/#/receivePage', '完成', this.$root.$options['languageSet']['ALREADIRECIVED'], 'success', true)
                                 }
                             })
                         } else {
                             console.log('3')
-                            redirect.redirect('/#/receivePage', '完成', '您已成功領取', 'success', true)
+                            redirect.redirect('/#/receivePage', '完成', this.$root.$options['languageSet']['ALREADIRECIVED'], 'success', true)
                         }
                     }
                 })

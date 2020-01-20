@@ -93,7 +93,7 @@
             },
             doneGame() {
                 this.$store.dispatch('enveModal', {show: false, content: ''})
-                redirect.redirect('/#/receivePage', '成功', '您已成功領取', 'success', true)
+                redirect.redirect('/#/receivePage', '成功', this.$root.$options['languageSet']['ALREADIRECIVED'], 'success', true)
             }
         }, 
         computed: {

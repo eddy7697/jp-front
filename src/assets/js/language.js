@@ -83,7 +83,12 @@ const language = {
         STARTGAMETIME: 'ゲーム開始時間',
         ENDGAMETIME: '終わり時間',
         VERIFYNEED: '検証必要',
-        YOURALREADISUCCESS: 'もう成功しました'
+        YOURALREADISUCCESS: 'もう成功しました',
+        RECEIVETXT: '受け取る',
+        EDITSUCCESS: '変更しました',
+        ALREADIRECIVED: '受け取りしました',
+        REGISUCCESS: '登録しました',
+        DUEDAY: '有効期限'
     },
     TW: {
         LOGIN_TXT: '登入',
@@ -169,7 +174,12 @@ const language = {
         STARTGAMETIME: '開始遊戲時間',
         ENDGAMETIME: '結束時間',
         VERIFYNEED: '必須驗證',
-        YOURALREADISUCCESS: '您已成功'
+        YOURALREADISUCCESS: '您已成功',
+        RECEIVETXT: '領取',
+        EDITSUCCESS: '您已成功更改',
+        ALREADIRECIVED: '您已成功領取',
+        REGISUCCESS: '您已成功註冊',
+        DUEDAY: '到期時間'
     }
 }
 
