@@ -35,7 +35,7 @@ class slideToUnlock {
         }
         
         if(!("unlockText" in this.settings)){
-            this.settings.unlockText = languageSet['JP']['SWIPE_RIGHT'];
+            this.settings.unlockText = languageSet['SWIPE_RIGHT'];
         }
 
         this.init();
