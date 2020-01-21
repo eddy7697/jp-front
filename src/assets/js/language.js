@@ -111,7 +111,8 @@ const languages = {
         ORDER_NUMBER: '注文番号',
         CANCEL_ORDER: 'キャンセル注文',
         CREDIT_CARD: 'クレジットカード',
-        ONE_MORE_TRY: 'もう一度'
+        ONE_MORE_TRY: 'もう一度',
+        MAIL_BOX: '信件夾'
     },
     TW: {
         LOGIN_TXT: '登入',
@@ -224,7 +225,8 @@ const languages = {
         ORDER_NUMBER: '訂單編號',
         CANCEL_ORDER: '取消訂單',
         CREDIT_CARD: '信用卡',
-        ONE_MORE_TRY: '重試'
+        ONE_MORE_TRY: '重試',
+        MAIL_BOX: '信件夾'
     }
 }
 

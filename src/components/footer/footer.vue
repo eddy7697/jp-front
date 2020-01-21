@@ -9,10 +9,10 @@
             <img :src="contractShop" alt="" @click="redirect('contractShop')">
             特約商店
         </div> -->
-        <div @click="redirect('/System')">
+        <!-- <div @click="redirect('/System')">
             <img :src="game" alt="">
             {{txT['GAME']}}
-        </div>
+        </div> -->
         <!-- <div>
             <img :src="trade" alt="" @click="redirect('Trade')">
             回饋幣

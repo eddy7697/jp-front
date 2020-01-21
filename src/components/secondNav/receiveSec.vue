@@ -5,7 +5,9 @@
                 <div class="receiveNav">
                     <div 
                     :class="{active: isActive == '2'}"
-                    @click="()=>{clickNav('2')}">信件夾</div>
+                    @click="()=>{clickNav('2')}">
+                    {{this.$root.$options['languageSet']['MAIL_BOX']}}
+                    </div>
                 </div>
             </div>
         </div>
