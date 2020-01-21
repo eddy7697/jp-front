@@ -1,12 +1,8 @@
 import axios from 'axios'
 const swal = require('sweetalert2')
 import router from './../../router'
-import { language } from '../../assets/js/language'
-if(localStorage.getItem('ULG_LANG') == 'JP') {       
-  var languageSet = language.JP
-} else {
-  var languageSet = language.TW
-}
+import { languageSet } from '../../assets/js/language'
+
 const state = {
   'client_id': '922301cb2254401cc84399578ec473de',
   'client_secret': 'a7428d49d6d40dee87f43c4588154f0c'

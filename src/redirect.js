@@ -1,10 +1,6 @@
 const swal = require('sweetalert2')
-import { language } from './assets/js/language'
-if(localStorage.getItem('ULG_LANG') == 'JP') {       
-  var languageSet = language.JP
-} else {
-  var languageSet = language.TW
-}
+import { languageSet } from './assets/js/language'
+
 export default {
     redirect(url, title, text, type, reload) {
         swal.fire({

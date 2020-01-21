@@ -1,4 +1,5 @@
-const language = {
+var languageSet
+const languages = {
     JP: {
         LOGIN_TXT: 'ログイン',
         FREE_LOGIN: '無料登録',
@@ -227,4 +228,11 @@ const language = {
     }
 }
 
-export { language }
+if(localStorage.getItem('ULG_LANG') == 'JP') {       
+    languageSet = languages.JP
+} else {
+    languageSet = languages.TW
+}
+
+
+export { languageSet }

@@ -1,5 +1,5 @@
 
-import { language } from '../../../assets/js/language'
+import { languageSet } from '../../../assets/js/language'
 class slideToUnlock {
     constructor(el, options){
         this.$el = el;
@@ -31,19 +31,11 @@ class slideToUnlock {
         }
         
         if(!("lockText" in this.settings)){
-            if(localStorage.getItem('ULG_LANG') == 'JP') {
-                this.settings.lockText = language['JP']['SWIPE_RIGHT'];
-            } else {
-                this.settings.lockText = language['TW']['SWIPE_RIGHT'];
-            }
+            this.settings.lockText = languageSet['SWIPE_RIGHT'];
         }
         
         if(!("unlockText" in this.settings)){
-            if(localStorage.getItem('ULG_LANG') == 'JP') {
-                this.settings.unlockText = language['JP']['SWIPE_RIGHT'];
-            } else {
-                this.settings.unlockText = language['TW']['SWIPE_RIGHT'];
-            }         
+            this.settings.unlockText = languageSet['JP']['SWIPE_RIGHT'];
         }
 
         this.init();

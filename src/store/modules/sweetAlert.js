@@ -1,13 +1,9 @@
 import router from '../../router'
 import store from '../store';
-import { language } from '../../assets/js/language'
+import { languageSet } from '../../assets/js/language'
 
 const swal = require('sweetalert2')
-if(localStorage.getItem('ULG_LANG') == 'JP') {       
-    var languageSet = language.JP
-} else {
-    var languageSet = language.TW
-}
+
 const state = {
     alertText: '',
     confirmTxt: '',

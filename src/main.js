@@ -13,7 +13,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import BootstrapVue from 'bootstrap-vue'
 import VueClipboard from 'vue-clipboard2'
 import { VueHammer } from 'vue2-hammer'
-import { language } from '@/assets/js/language'
+import { languageSet } from '@/assets/js/language'
 
 Vue.use(VueHammer)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
@@ -38,13 +38,6 @@ const getP = (queryString) => {
         query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
     }
     return query;
-}
-
-var languageSet
-if(localStorage.getItem('ULG_LANG') == 'JP') {       
-    languageSet = language.JP
-} else {
-    languageSet = language.TW
 }
 
 console.log(languageSet)
