@@ -37,7 +37,7 @@
                             </div>
                         </div>
                     </fieldset>
-                    <button @click="redirect('Group')">確定</button>
+                    <button @click="redirect('Group')">{{this.$root.$options['languageSet']['CONFIRMTXT']}}</button>
                 </div>
             </div>
         </div>

@@ -8,10 +8,10 @@
                 </div>
                 <div class="row">
                     <div class="btn col-6 btn-danger" @click="closeModal()">
-                        取消
+                        {{this.$root.$options['languageSet']['CANCEL']}}
                     </div>
                     <div class="btn col-6 btn-primary" @click="confirmBuy(content)">
-                        確定
+                        {{this.$root.$options['languageSet']['CONFIRMTXT']}}
                     </div>
                 </div>
             </div>

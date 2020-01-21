@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="col-12">
                     <div class="btn btn-primary btn-md" @click="toLoadTableData()">
-                        更新狀態
+                        {{this.$root.$options['languageSet']['UPDATESTATUS']}}
                     </div>
                 </div>
             </div>
@@ -14,19 +14,31 @@
                 <div class="col-12">
                     <b-table class="table table-striped" striped hover :items="items" :fields="fields">
                         <template slot="confirm_status" slot-scope="data">
-                            <h6 v-if="data['item']['confirm_status'] == 0" class="text-gray">未發放</h6>
-                            <h6 v-if="data['item']['confirm_status'] == 1" class="text-gray">已發放</h6>
-                            <h6 v-if="data['item']['confirm_status'] == 2" class="text-gray">拒發放</h6>
-                            <h6 v-if="data['item']['confirm_status'] == 3" class="text-gray">退訂中</h6>
-                            <h6 v-if="data['item']['confirm_status'] == 4" class="text-gray">已退訂</h6>
-                            <h6 v-if="data['item']['confirm_status'] == 5" class="text-gray">已逾期</h6>
+                            <h6 v-if="data['item']['confirm_status'] == 0" class="text-gray">
+                                {{this.$root.$options['languageSet']['NOTRELEASE']}}
+                            </h6>
+                            <h6 v-if="data['item']['confirm_status'] == 1" class="text-gray">
+                                {{this.$root.$options['languageSet']['RELEASED']}}
+                            </h6>
+                            <h6 v-if="data['item']['confirm_status'] == 2" class="text-gray">
+                                {{this.$root.$options['languageSet']['REJECTRELEASED']}}
+                            </h6>
+                            <h6 v-if="data['item']['confirm_status'] == 3" class="text-gray">
+                                {{this.$root.$options['languageSet']['CANCELORDER']}}
+                            </h6>
+                            <h6 v-if="data['item']['confirm_status'] == 4" class="text-gray">
+                                {{this.$root.$options['languageSet']['ALREADICANCEL']}}
+                            </h6>
+                            <h6 v-if="data['item']['confirm_status'] == 5" class="text-gray">
+                                {{this.$root.$options['languageSet']['CANCELORDER']}}
+                            </h6>
                         </template>
                         <template slot="payment_type" slot-scope="data">
-                            <h6 v-if="data['item']['payment_type'] == 1" class="text-success">信用卡</h6>
+                            <h6 v-if="data['item']['payment_type'] == 1" class="text-success">{{this.$root.$options['languageSet']['CREDIT_CARD']}}</h6>
                             <h6 v-if="data['item']['payment_type'] == 2" class="text-primary">ATM</h6>
                         </template>
                         <template slot="cancelAction" slot-scope="data">
-                            <button  v-if="data['item']['confirm_status'] == 0" class="btn btn-lg btn-danger col-6" @click="reject(data)">取消</button>
+                            <button  v-if="data['item']['confirm_status'] == 0" class="btn btn-lg btn-danger col-6" @click="reject(data)">{{this.$root.$options['languageSet']['CANCEL']}}</button>
                             <button  v-if="false" class="btn btn-lg btn-success col-6" @click="cancelThis(data)">重試</button>
                         </template>
                     </b-table>
@@ -55,27 +67,27 @@
                 items: [],
                 fields: {
                     amount: {
-                        label: '訂單金額',
+                        label: this.$root.$options['languageSet']['ORDERPRICE'],
                         sortable: true
                     },
                     confirm_status: {
-                        label: '發放狀態',
+                        label: this.$root.$options['languageSet']['RELEASEDSTATUS'],
                         sortable: true
                     },
                     created_at: {
-                        label: '申請',
+                        label: this.$root.$options['languageSet']['APPLY'],
                         sortable: true
                     },
                     payment_type: {
-                        label: '付款方式',
+                        label: this.$root.$options['languageSet']['THE_WAY_OF_PAYING'],
                         sortable: true
                     },
                     number: {
-                        label: '訂單編號',
+                        label: this.$root.$options['languageSet']['ORDER_NUMBER'],
                         sortable: true
                     },
                     cancelAction: {
-                        label: '取消訂單',
+                        label: this.$root.$options['languageSet']['CANCEL_ORDER'],
                         sortable: true
                     }
                 },

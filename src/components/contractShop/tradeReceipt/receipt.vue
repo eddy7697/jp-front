@@ -59,7 +59,7 @@
                     </div>
                     <div class="col-12 text-center" v-if="content.item['confirm_status'] == 0 && content.item['from_member_account_uid'] !== uid">
                         <button class="btn btn-lg btn-success col-6" @click="confirm()">
-                            確定
+                            {{this.$root.$options['languageSet']['CONFIRMTXT']}}
                         </button>
                          <button class="btn btn-lg btn-danger col-6" @click="reject()">
                             拒絕

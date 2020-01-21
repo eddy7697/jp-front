@@ -1,8 +1,13 @@
 import router from '../../router'
 import store from '../store';
+import { language } from '../../assets/js/language'
 
 const swal = require('sweetalert2')
-
+if(localStorage.getItem('ULG_LANG') == 'JP') {       
+    var languageSet = language.JP
+} else {
+    var languageSet = language.TW
+}
 const state = {
     alertText: '',
     confirmTxt: '',
@@ -21,7 +26,7 @@ const actions = {
             title: 'Error!',
             text: error.errorMsg.error.message,
             type: 'error',
-            confirmButtonText: '確定'
+            confirmButtonText: languageSet['CONFIRMTXT']
         })
         commit('updateMember', )
     },
@@ -39,7 +44,7 @@ const mutations = {
             title: state.confirmTitle,
             html: state.confirmTxt,
             type: 'success',
-            confirmButtonText: '確定'
+            confirmButtonText: languageSet['CONFIRMTXT']
         }).then(result => {
             // redirection(payload)
             state.reload = payload['reload']

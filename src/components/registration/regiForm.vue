@@ -65,7 +65,7 @@
                     <button class="btn-lg btn-primary" @click="redirect('/')">{{txT['HOMEPAGE']}}</button>
                 </div>
                 <div class="col-6 text-center">
-                    <button class="btn-lg btn-primary" :disabled="!msgTxt"  @click="sendRegiData()">確定</button>
+                    <button class="btn-lg btn-primary" :disabled="!msgTxt"  @click="sendRegiData()">{{this.$root.$options['languageSet']['CONFIRMTXT']}}</button>
                 </div>
             </div>
         </div>
@@ -133,7 +133,7 @@ const swal = require('sweetalert2')
                             title: 'Error!',
                             text: item.errorMsg,
                             type: 'error',
-                            confirmButtonText: '確定'
+                            confirmButtonText: this.$root.$options['languageSet']['CONFIRMTXT']
                         })
                         return
                     } else {
@@ -161,7 +161,7 @@ const swal = require('sweetalert2')
                             title: 'Error!',
                             text: item.errorMsg,
                             type: 'error',
-                            confirmButtonText: '確定'
+                            confirmButtonText: this.$root.$options['languageSet']['CONFIRMTXT']
                         })
                         return
                         // this.$store.dispatch('openAlert', result)
@@ -177,7 +177,7 @@ const swal = require('sweetalert2')
                         title: 'Error!',
                         text: '請輸入九碼以上電話',
                         type: 'error',
-                        confirmButtonText: '確定'
+                        confirmButtonText: this.$root.$options['languageSet']['CONFIRMTXT']
                     })
                     return 
                 }
@@ -186,7 +186,7 @@ const swal = require('sweetalert2')
                         title: 'Error!',
                         text: '錯誤，請重新掃描發財卡',
                         type: 'error',
-                        confirmButtonText: '確定'
+                        confirmButtonText: this.$root.$options['languageSet']['CONFIRMTXT']
                     })
                     return 
                 }

@@ -24,7 +24,7 @@
                             </h6>
                         </template>
                         <template slot="function" slot-scope="data">
-                            <button @click="cancelCom(data)" class="btn btn-sm btn-primary" v-if="data['item'].uid == uid">取消</button>
+                            <button @click="cancelCom(data)" class="btn btn-sm btn-primary" v-if="data['item'].uid == uid">{{this.$root.$options['languageSet']['CANCEL']}}</button>
                         </template>
                     </b-table>
                 </div>

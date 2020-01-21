@@ -24,7 +24,7 @@
                 <img class="congrat-Img" src="@/assets/images/envelope/mail_envelope_con.png" alt="">
                 <div class="price">{{priceWon}}</div>
                 <h6>可於下次消費折抵{{Math.floor(priceWon/200)}}元</h6>
-                <button class="btn btn-success" @click="doneGame()">確定</button>
+                <button class="btn btn-success" @click="doneGame()">{{this.$root.$options['languageSet']['CONFIRMTXT']}}</button>
             </div>
         </div>
     </div>

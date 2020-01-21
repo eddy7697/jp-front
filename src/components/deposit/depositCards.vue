@@ -47,7 +47,7 @@
                          <div class="input-area">
                              <div class="form-group">
                                 <div class="">
-                                    <input type="number" v-model="buyingAmount" class="form-control input-bgGray" name="amount" id="amount"  placeholder="請輸入金額" min="1" required>
+                                    <input type="number" v-model="buyingAmount" class="form-control input-bgGray" name="amount" id="amount"  placeholder={{this.$root.$options['languageSet']['PLZENTERPRICE']}} min="1" required>
                                 </div>
                             </div>
 
@@ -59,7 +59,7 @@
 
                             <div class="text-center" style="margin-top:5px;">
                                 <button id="btn-buy-img" class="btn btn-member" @click="openModal(buyingAmount)"
-                                >確認申請</button>
+                                >{{this.$root.$options['languageSet']['CONFIRMTXT']}}</button>
                             </div>
                          </div>
                     </div>
@@ -93,9 +93,9 @@
                 if(Number(amount) < 100) {
                     swal.fire({
                         title: 'Error!',
-                        text: '最低儲值金額為100',
+                        text: this.$root.$options['languageSet']['LEASTMONEY'],
                         type: 'error',
-                        confirmButtonText: '確定'
+                        confirmButtonText: this.$root.$options['languageSet']['CONFIRMTXT']
                     })
                     return
                 }

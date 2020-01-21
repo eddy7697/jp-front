@@ -45,7 +45,7 @@
                 <div class="row">
                     <div class="col-6 text-center">
                         <div class="btn btn-lg btn-default" @click="closeModal()">
-                            取消
+                            {{this.$root.$options['languageSet']['CANCEL']}}
                         </div>
                     </div>
                     <div class="col-6 text-center">

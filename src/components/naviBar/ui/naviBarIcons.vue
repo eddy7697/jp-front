@@ -73,7 +73,7 @@
                             title: '您未有發財卡',
                             text: '請至商城購買發財卡',
                             type: 'warning',
-                            confirmButtonText: '確定'
+                            confirmButtonText: this.$root.$options['languageSet']['CONFIRMTXT']
                             }).then(()=>{
                                 this.$router.push('Mall')
                             })

@@ -6,7 +6,7 @@
             <QrcodeStream @decode="onDecode" @init="onInit($event)"  />
             <div class="container" style="margin-bottom:5px;">
                 <div class="row" id="alignBox">
-                    <button class="form-control" @click="cancelScan()">取消</button>
+                    <button class="form-control" @click="cancelScan()">{{this.$root.$options['languageSet']['CANCEL']}}</button>
                     <button class="form-control" @click="myQrCode()">交易QRcode</button>
                 </div>
             </div>

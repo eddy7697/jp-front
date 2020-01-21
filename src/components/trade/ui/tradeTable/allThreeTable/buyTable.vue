@@ -23,7 +23,7 @@
                     </template>
                     <template slot="uid" slot-scope="data">
                     <button  @click="openBuyModal(data)" v-if="data.value !== uid " class="btn">購買</button>
-                    <button  @click="cancelBuy(data)" v-if="data.value == uid " class="btn btn-default">取消</button>
+                    <button  @click="cancelBuy(data)" v-if="data.value == uid " class="btn btn-default">{{this.$root.$options['languageSet']['CANCEL']}}</button>
                     </template>
                 </b-table>  
             </div>

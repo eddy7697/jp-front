@@ -58,10 +58,10 @@
                     </div>
                     <div class="col-12 text-center">
                         <button class="btn btn-lg btn-primary" @click="closeModal()">
-                            取消
+                            {{this.$root.$options['languageSet']['CANCEL']}}
                         </button>
                         <button class="btn btn-lg btn-success" @click="scModalConfirm()">
-                            確定
+                            {{this.$root.$options['languageSet']['CONFIRMTXT']}}
                         </button>
                     </div>
                 </div>

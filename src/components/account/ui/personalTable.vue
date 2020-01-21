@@ -72,7 +72,7 @@
                 <div class="col-12">
                     <div  class="name">
                         {{this.$root.$options['languageSet']['INVITOR']}}: {{invitePerson}} <br/>
-                        <span v-if="invitePersonLine">邀請人Line ID: {{invitePersonLine}}</span>
+                        <span v-if="invitePersonLine">{{this.$root.$options['languageSet']['INVITOR']}}Line ID: {{invitePersonLine}}</span>
                     </div>
                 </div>
                 <div class="col-12">
@@ -82,7 +82,7 @@
                         <span class="level_txt" v-if="benefit == 3">    </span>
                         <span class="level_txt" v-if="benefit == 6">    </span>
                         <span class="level_txt" v-if="benefit == 9">    </span>
-                        <span v-if="effective">(到期時間：{{effective}})</span> 
+                        <span v-if="effective">({{this.$root.$options['languageSet']['DUEDAY']}}：{{effective}})</span> 
                     </div>
                 </div>
                 <div class="col-12">

@@ -36,7 +36,7 @@ const errorAuth = () => {
       title: 'Error!',
       text: languageSet['SUCCESSLOGOUT'],
       type: 'error',
-      confirmButtonText: '確定'
+      confirmButtonText: languageSet['CONFIRMTXT']
   }).then(function(){
     window.location.href = '/'
   })

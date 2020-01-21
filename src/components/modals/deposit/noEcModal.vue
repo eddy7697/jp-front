@@ -7,7 +7,7 @@
            <div class="row">
                <div class="container" style="margin-top:15px;">
                    <div class="col-12 text-center">
-                        <button class="btn btn-primary" @click="closeModal()">確定</button>
+                        <button class="btn btn-primary" @click="closeModal()">{{this.$root.$options['languageSet']['CONFIRMTXT']}}</button>
                    </div>
                </div>
            </div>

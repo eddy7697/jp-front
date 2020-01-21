@@ -81,8 +81,8 @@
                         </div>
                     </div>
                     <div class="row">
-                        <button class="col-6" @click="cancel()">取消</button>
-                        <button class="col-6" @click="redirect('Group')">確定</button>
+                        <button class="col-6" @click="cancel()">{{this.$root.$options['languageSet']['CANCEL']}}</button>
+                        <button class="col-6" @click="redirect('Group')">{{this.$root.$options['languageSet']['CONFIRMTXT']}}</button>
                     </div>
                 </div>
             </div>

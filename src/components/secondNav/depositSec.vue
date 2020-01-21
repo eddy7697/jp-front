@@ -5,7 +5,7 @@
                 <div class="depositNav">
                     <div 
                     :class="{active: isActive == '2'}"
-                    @click="()=>{clickNav('2')}">儲值</div>
+                    @click="()=>{clickNav('2')}">{{txT['DEPOSIT']}}</div>
                     <div 
                     :class="{active: isActive == '3'}"
                     @click="()=>{clickNav('3')}">{{txT['RECORD']}}</div>

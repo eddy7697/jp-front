@@ -22,10 +22,10 @@
                     </template>
                     <template slot="operate" slot-scope="data">
                         <h6 class="text-success" v-if="data['item']['operate'] == 'expenses'">
-                            轉出
+                            {{txT['TRANSFEROUT']}}
                         </h6>
                         <h6 class="text-info" v-if="data['item']['operate'] == 'income'">
-                            轉入
+                            {{txT['TRANSFERIN']}}
                         </h6>
                     </template>
                     <template slot="point" slot-scope="data">

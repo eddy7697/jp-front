@@ -50,12 +50,12 @@
                 <div class="row">
                     <div class="col-6 text-center">
                         <button class="cancelModal btn-lg text-center" @click="closeModal()">
-                            取消
+                            {{this.$root.$options['languageSet']['CANCEL']}}
                         </button>
                     </div>
                     <div class="col-6 text-center">
                         <button class="confirmModal btn-lg text-center btn-primary" @click="sellCoin()">
-                            確定
+                            {{this.$root.$options['languageSet']['CONFIRMTXT']}}
                         </button>
                     </div>
                 </div>

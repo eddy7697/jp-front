@@ -8,7 +8,7 @@
                 </div>
                 <div class="row">
                     <div id="btnFooter" class="col-12 text-center">
-                        <button type="button" @click="closeModal()" class="btn btn-secondary">取消</button>
+                        <button type="button" @click="closeModal()" class="btn btn-secondary">{{this.$root.$options['languageSet']['CANCEL']}}</button>
                         <button type="button" class="btn btn-primary" @click="useCard(content)">使用</button>
                     </div>
                 </div>

@@ -9,7 +9,7 @@
                     </div>
                     <div v-if="hideFirstRow" class="near btn btn-success" @click="findNearest()">
                         <span v-if="!nearest">附近店家</span>
-                        <span v-if="nearest">取消附近</span>
+                        <span v-if="nearest">{{this.$root.$options['languageSet']['CANCEL']}}附近</span>
                         <span v-if="nearest">
                             <i class="fa fa-check" aria-hidden="true"></i>
                         </span>
@@ -209,7 +209,7 @@
                         title: 'Error!',
                         text: '您的瀏覽器不支援此項功能，請選擇其他瀏覽器。',
                         type: 'error',
-                        confirmButtonText: '確定'
+                        confirmButtonText: this.$root.$options['languageSet']['CONFIRMTXT']
                     })
                 }
             },

@@ -42,7 +42,7 @@
                 <div class="container">
                     <div class="row">
                         <div @click="closeModal()" class="col-6 text-center btn-lg btn-default">
-                            取消
+                            {{this.$root.$options['languageSet']['CANCEL']}}
                         </div>
                         <div @click="sendData()" class="col-6 text-center btn-lg btn-primary">
                             確認
